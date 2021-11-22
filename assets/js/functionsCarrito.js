@@ -1,6 +1,6 @@
 
-    let carrito = [];
-    let total = 0;
+    var carrito = [];
+    var total = 0;
     const DOMcarrito = document.querySelector('#carrito');
     const DOMtotal = document.querySelector('#total');
     const DOMbotonVaciar = document.querySelector('#boton-vaciar');
@@ -130,3 +130,4 @@
     cargarCarritoDeLocalStorage();
     calcularTotal();
     renderizarCarrito();
+

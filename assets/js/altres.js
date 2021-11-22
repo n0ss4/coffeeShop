@@ -40,7 +40,7 @@ window.onload = function () {
             miNodoCardBody.appendChild(miNodoPrecio);
             miNodoCardBody.appendChild(miNodoBoton);
             miNodo.appendChild(miNodoCardBody);
-            if(info.categoria=='pastes'){
+            if(info.categoria=='altres'){
                 DOMitems.appendChild(miNodo);
            }
         });

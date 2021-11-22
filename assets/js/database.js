@@ -221,49 +221,49 @@ const baseDeDatos = [
         nombre: 'Donut',
         precio: 0.75,
         imagen: 'sandwich.png',
-        categoria: 'pastes'
+        categoria: 'altres'
     },
     {
         id: 32,
         nombre: 'Donut de xocolata',
         precio: 1.00,
         imagen: 'sandwich.png',
-        categoria: 'pastes'
+        categoria: 'altres'
     },
     {
         id: 33,
         nombre: 'Triangle',
         precio: 1.00,
         imagen: 'sandwich.png',
-        categoria: 'pastes'
+        categoria: 'altres'
     },
     {
         id: 34,
         nombre: 'Ensaïmada',
         precio: 0.65,
         imagen: 'sandwich.png',
-        categoria: 'pastes'
+        categoria: 'altres'
     },
     {
         id: 35,
         nombre: 'Croissant xocolata',
         precio: 0.90,
         imagen: 'sandwich.png',
-        categoria: 'pastes'
+        categoria: 'altres'
     },
     {
         id: 36,
         nombre: 'Pasta de full',
         precio: 0.85,
         imagen: 'sandwich.png',
-        categoria: 'pastes'
+        categoria: 'altres'
     },
     {
         id: 37,
         nombre: 'Palmera',
         precio: 0.85,
         imagen: 'sandwich.png',
-        categoria: 'pastes'
+        categoria: 'altres'
     }
 ];
 
