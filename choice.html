@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Cafè Facultat de Ciències - Choice</title>
+    <title>Cafè Facultat de Ciències - Order</title>
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
@@ -18,7 +18,7 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand mr-auto ml-3 pt-1" href="#">Cafè Facultat de Ciències</a>
+        <a class="navbar-brand mr-auto ml-3 pt-1" href="./index.html">Cafè Facultat de Ciències</a>
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -49,22 +49,49 @@
             </ul>
         </div>
     </nav>
-
-    <header class="" style="padding-top: 20vh">
-
+    <!--
+<div class="stepper-wrapper">
+    <div class="stepper-item completed">
+        <div class="step-counter"><a href="sandwitch.html">1</a></div>
+        <div class="step-name">Bocates</div>
+    </div>
+    <div class="stepper-item active">
+        <div class="step-counter"><a href="beguda.html">2</a></div>
+        <div class="step-name">Begudes</div>
+    </div>
+    <div class="stepper-item">
+        <div class="step-counter"><a href="altres.html">3</a></div>
+        <div class="step-name">Altres</div>
+    </div>
+    <div class="stepper-item">
+        <div class="step-counter">4</div>
+        <div class="step-name">Pagar</div>
+    </div>
+</div>
+-->
+    <header class="" style="">
         <div class="container">
-            <h3 id="name"></h3>
-
+            <h1>Bocates</h1>
             <div class="row col-12">
-                <div class="col-md-6">
-                    <a href="sandwitch.html">Lliure eleccio</a>
+                <div class="col-md-8">
+                    <main id="items" class="row"></main>
+                    <!--Biquini-->
+                    <main id="items1" class="row"></main>
+                    <!--Llom-->
+                    <main id="items2" class="row"></main>
+                    <!--Truita-->
                 </div>
-
-                <div class="col-md-6">
-                    <a href="menu.html">Menu</a>
+                <div class="col-md-4">
+                    <aside>
+                        <h2>Carrito</h2>
+                        <ul id="carrito" class="list-group"></ul>
+                        <hr>
+                        <p class="text-right">Total: <span id="total"></span>&euro;</p>
+                        <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                        <button onclick="window.open('beguda.html','_self')" class="btn btn-success">Siguiente</button>
+                    </aside>
                 </div>
             </div>
-
         </div>
     </header>
     <!-- FOOTER -->
@@ -106,7 +133,9 @@
             </div>
         </div>
     </footer>
-    <script type="text/javascript" src="/assets/js/eleccio.js"></script>
+    <script type="text/javascript" src="assets/js/database.js"></script>
+    <script type="text/javascript" src="assets/js/functionsCarrito.js"></script>
+    <script type="text/javascript" src="assets/js/sandwitch.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
