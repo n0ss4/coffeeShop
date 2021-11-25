@@ -1,11 +1,9 @@
 window.onload = function () {
     // Variables
 
-    const DOMitems = document.querySelector('#items');//Aigua
-    const DOMitems1 = document.querySelector('#items1');//Cervesa
-    const DOMitems2 = document.querySelector('#items2');//Beguda
-    const DOMitems3 = document.querySelector('#items3');//suc
+    const DOMitems = document.querySelector('#items');
 
+    // Funciones
 
     /**
      * Dibuja todos los productos a partir de la base de datos. No confundir con el carrito
@@ -42,21 +40,10 @@ window.onload = function () {
             miNodoCardBody.appendChild(miNodoPrecio);
             miNodoCardBody.appendChild(miNodoBoton);
             miNodo.appendChild(miNodoCardBody);
-            if(info.categoria=='aigua'){
+            if(info.categoria=='altres'){
                 DOMitems.appendChild(miNodo);
-            }else if(info.categoria=='cervesa'){
-                DOMitems1.appendChild(miNodo);
-            }else if(info.categoria=='beguda'){
-                DOMitems2.appendChild(miNodo);
-            }else if(info.categoria=='suc'){
-                DOMitems3.appendChild(miNodo);
-            }
-
+           }
         });
-
-
     }
-
-
     renderizarProductos();
 }
