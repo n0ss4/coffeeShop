@@ -50,41 +50,39 @@
         <div class="step-counter"><a href="sandwitch.html">1</a></div>
         <div class="step-name">Bocates</div>
     </div>
-    <div class="stepper-item active">
+    <div class="stepper-item completed">
         <div class="step-counter"><a href="beguda.html">2</a></div>
         <div class="step-name">Begudes</div>
     </div>
-    <div class="stepper-item">
+    <div class="stepper-item completed">
         <div class="step-counter"><a href="altres.html">3</a></div>
         <div class="step-name">Altres</div>
     </div>
-    <div class="stepper-item">
+    <div class="stepper-item active">
         <div class="step-counter">4</div>
         <div class="step-name">Pagar</div>
     </div>
 </div>
 -->
 <header class="" style="">
-<div class="container">
-    <h1>Bocates</h1>
-    <div class="row col-12">
-        <div class="col-md-8">
-            <main id="items" class="row"></main><!--Biquini-->
-            <main id="items1" class="row"></main><!--Llom-->
-            <main id="items2" class="row"></main><!--Truita-->
-        </div>
-        <div class="col-md-4">
-            <aside>
-                <h2>Carrito</h2>
-                <ul id="carrito" class="list-group"></ul>
-                <hr>
-                <p class="text-right">Total: <span id="total"></span>&euro;</p>
-                <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
-               <button onclick="window.open('beguda.html','_self')" class="btn btn-success" >Siguiente</button>
-            </aside>
+    <div class="container">
+        <h1>Altres</h1>
+        <div class="row col-12">
+
+            <div class="col-md-4">
+                <aside>
+                    <h2>Carro</h2>
+                    <ul id="carrito" class="list-group"></ul>
+                    <hr>
+                    <p class="text-right">Total: <span id="total"></span>&euro;</p>
+                    <div class="row">
+                        <button id="modify" class="btn btn-danger">Modificar</button>
+                        <button id="confirm" class="btn btn-danger">Confirmar</button>
+                    </div>
+                </aside>
+            </div>
         </div>
     </div>
-</div>
 </header>
 <!-- FOOTER -->
 <footer class="footer">
@@ -126,8 +124,7 @@
     </div>
 </footer>
 <script type="text/javascript" src="assets/js/database.js"></script>
-<script type="text/javascript" src="assets/js/functionsCarrito.js"></script>
-<script type="text/javascript" src="assets/js/sandwitch.js"></script>
+<script type="text/javascript" src="assets/js/pagar.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

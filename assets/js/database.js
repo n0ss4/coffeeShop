@@ -264,6 +264,77 @@ const baseDeDatos = [
         precio: 0.85,
         imagen: 'sandwich.png',
         categoria: 'altres'
+    },
+    {
+        id: 100,
+        nombre: 'Pasta fresca',
+        precio: 2,
+        imagen: 'sandwich.png',
+        categoria: 'menu'
+    },
+    {
+        id: 101,
+        nombre: 'Macarrons',
+        precio: 2,
+        imagen: 'sandwich.png',
+        categoria: 'menu'
+    },
+    {
+        id: 102,
+        nombre: 'Amanida Verda',
+        precio: 2,
+        imagen: 'sandwich.png',
+        categoria: 'menu'
+    },
+    {
+        id: 103,
+        nombre: 'Llom amb patates',
+        precio: 2,
+        imagen: 'sandwich.png',
+        categoria: 'menu'
+    },
+    {
+        id: 104,
+        nombre: 'Galta de porc amb patates',
+        precio: 2,
+        imagen: 'sandwich.png',
+        categoria: 'menu'
+    },
+    {
+        id: 105,
+        nombre: 'Verdura',
+        precio: 2,
+        imagen: 'sandwich.png',
+        categoria: 'menu'
+    },
+    {
+        id: 106,
+        nombre: 'Fruita del dia',
+        precio: 2,
+        imagen: 'sandwich.png',
+        categoria: 'menu'
+    },
+    {
+        id: 107,
+        nombre: 'Natilles',
+        precio: 2,
+        imagen: 'sandwich.png',
+        categoria: 'menu'
+    },
+    {
+        id: 108,
+        nombre: 'Yogurt bacon',
+        precio: 2,
+        imagen: 'sandwich.png',
+        categoria: 'menu'
+    }
+    ,
+    {
+        id: 109,
+        nombre: 'Aigua',
+        precio: 0.10,
+        imagen: 'sandwich.png',
+        categoria: 'menu'
     }
 ];
 

@@ -52,6 +52,4 @@ window.onload = function () {
         });
     }
     renderizarProductos();
-
-
 }
