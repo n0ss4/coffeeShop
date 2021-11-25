@@ -1,175 +1,187 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <title></title>
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <title>Cafè Facultat de Ciències - Menu</title>
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
 
 </head>
+
 <body>
-<nav class="navbar navbar-transparent fixed-top">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand mr-auto ml-3 pt-1" href="#">Order</a>
-  <div id="navbarCollapse" class="collapse navbar-collapse">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a href="index.html" class="nav-link active">
-          Home
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="sandwitch.html" class="nav-link active">
-          Order
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="" class="nav-link active">
-          Promotions
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="" class="nav-link active">
-          Events/News
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="contact.html" class="nav-link active">
-          Contact
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<header class="" style="padding-top: 20vh">
-  <h1>Menuuuu</h1>
-
-
-  <form action="pagar.html">
-
-    <fieldset id="group1">
-      <h3>Primer</h3>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioPrimer1" checked>
-        <label class="form-check-label" for="flexRadioPrimer1" id="flexRadioPrimer1id">
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioPrimer2" >
-        <label class="form-check-label" for="flexRadioPrimer2" id="flexRadioPrimer2id">
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioPrimer3" >
-        <label class="form-check-label" for="flexRadioPrimer3" id="flexRadioPrimer3id">
-        </label>
-      </div>
-    </fieldset>
-
-    <fieldset id="group2">
-      <h3>Segons</h3>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioSegon1" checked>
-        <label class="form-check-label" for="flexRadioSegon1" id="flexRadioSegon1id">
-          SegonPlat1
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioSegon2" >
-        <label class="form-check-label" for="flexRadioSegon2" id="flexRadioSegon2id">
-          SegonPlat2
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioSegon3" >
-        <label class="form-check-label" for="flexRadioSegon3" id="flexRadioSegon3id">
-          SegonPlat2
-        </label>
-      </div>
-    </fieldset>
-
-    <fieldset id="group3">
-      <h3>Postre</h3>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioPostre1" checked>
-        <label class="form-check-label" for="flexRadioPostre1" id="flexRadioPostre1id">
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioPostre2">
-        <label class="form-check-label" for="flexRadioPostre2" id="flexRadioPostre2id">
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioPostre3">
-        <label class="form-check-label" for="flexRadioPostre3" id="flexRadioPostre3id">
-        </label>
-      </div>
-    </fieldset>
-    <fieldset id="group4">
-      <h3>Beguda</h3>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioBeguda1">
-        <label class="form-check-label" for="flexRadioBeguda1" id="flexRadioBegudaid">
-        </label>
-      </div>
-    </fieldset>
-    <div class="col-md-3 col-lg-2 col-12 p-0 pl-md-3 mt-2 mt-md-auto">
-      <button type="submit" onclick="recopilarMenu()" class="btn btn-primary w-100">Pagar</button>
+  <!-- NAVBAR General -->
+  <nav class="navbar navbar-transparent fixed-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand mr-auto ml-3 pt-1" href="./index.html">Cafè Facultat de Ciències</a>
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link active">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="./order.html" class="nav-link active">
+            Order
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="./promotion.html" class="nav-link active">
+            Promotions
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="./event.html" class="nav-link active">
+            Events/News
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="./contact.html" class="nav-link active">
+            Contact
+          </a>
+        </li>
+      </ul>
     </div>
-  </form>
+  </nav>
+
+  <header class="" style="padding-top: 20vh">
+    <h1>Menuuuu</h1>
 
 
-</header>
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="w-100">
-    <div class="row">
-      <div class="col-md-4 d-flex">
-        <span class="mr-auto ml-5">Copyright &copy; Cafè Facultat de Ciències 2021</span>
+    <form action="pagar.html">
+
+      <fieldset id="group1">
+        <h3>Primer</h3>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioPrimer1" checked>
+          <label class="form-check-label" for="flexRadioPrimer1" id="flexRadioPrimer1id">
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioPrimer2">
+          <label class="form-check-label" for="flexRadioPrimer2" id="flexRadioPrimer2id">
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioPrimer3">
+          <label class="form-check-label" for="flexRadioPrimer3" id="flexRadioPrimer3id">
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset id="group2">
+        <h3>Segons</h3>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioSegon1" checked>
+          <label class="form-check-label" for="flexRadioSegon1" id="flexRadioSegon1id">
+            SegonPlat1
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioSegon2">
+          <label class="form-check-label" for="flexRadioSegon2" id="flexRadioSegon2id">
+            SegonPlat2
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioSegon3">
+          <label class="form-check-label" for="flexRadioSegon3" id="flexRadioSegon3id">
+            SegonPlat2
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset id="group3">
+        <h3>Postre</h3>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioPostre1" checked>
+          <label class="form-check-label" for="flexRadioPostre1" id="flexRadioPostre1id">
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioPostre2">
+          <label class="form-check-label" for="flexRadioPostre2" id="flexRadioPostre2id">
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioPostre3">
+          <label class="form-check-label" for="flexRadioPostre3" id="flexRadioPostre3id">
+          </label>
+        </div>
+      </fieldset>
+      <fieldset id="group4">
+        <h3>Beguda</h3>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioBeguda1">
+          <label class="form-check-label" for="flexRadioBeguda1" id="flexRadioBegudaid">
+          </label>
+        </div>
+      </fieldset>
+      <div class="col-md-3 col-lg-2 col-12 p-0 pl-md-3 mt-2 mt-md-auto">
+        <button type="submit" onclick="recopilarMenu()" class="btn btn-primary w-100">Pagar</button>
       </div>
-      <div class="col-md-4">
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <a href="#">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-4 d-flex">
-        <ul class="list-inline ml-auto mr-5">
-          <li class="list-inline-item">
-            <a href="#">Privacy Policy</a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">Terms of Use</a>
-          </li>
-        </ul>
+    </form>
+
+
+  </header>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="w-100">
+      <div class="row">
+        <div class="col-md-4 d-flex">
+          <span class="mr-auto ml-5">Copyright &copy; Cafè Facultat de Ciències 2021</span>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 d-flex">
+          <ul class="list-inline ml-auto mr-5">
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<script type="text/javascript" src="assets/js/database.js"></script>
-<script type="text/javascript" src="assets/js/menu.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/js/database.js"></script>
+  <script type="text/javascript" src="assets/js/menu.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
 
 </body>
 

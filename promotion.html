@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html lang="es">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Cafè Facultat de Ciències - Buy</title>
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title>Cafè Facultat de Ciències - Promotions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
-
+    <!-- Fontawesome css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body>
@@ -50,46 +49,25 @@
             </ul>
         </div>
     </nav>
-    <!--
-<div class="stepper-wrapper">
-    <div class="stepper-item completed">
-        <div class="step-counter"><a href="sandwitch.html">1</a></div>
-        <div class="step-name">Bocates</div>
-    </div>
-    <div class="stepper-item completed">
-        <div class="step-counter"><a href="beguda.html">2</a></div>
-        <div class="step-name">Begudes</div>
-    </div>
-    <div class="stepper-item completed">
-        <div class="step-counter"><a href="altres.html">3</a></div>
-        <div class="step-name">Altres</div>
-    </div>
-    <div class="stepper-item active">
-        <div class="step-counter">4</div>
-        <div class="step-name">Pagar</div>
-    </div>
-</div>
--->
-    <header class="" style="">
-        <div class="container">
-            <h1>Altres</h1>
-            <div class="row col-12">
 
-                <div class="col-md-4">
-                    <aside>
-                        <h2>Carro</h2>
-                        <ul id="carrito" class="list-group"></ul>
-                        <hr>
-                        <p class="text-right">Total: <span id="total"></span>&euro;</p>
-                        <div class="row">
-                            <button id="modify" class="btn btn-danger">Modificar</button>
-                            <button id="confirm" class="btn btn-danger">Confirmar</button>
-                        </div>
-                    </aside>
+    <!-- CONTENT -->
+    <header class="d-flex h-100" style="padding: .25rem .75rem;">
+        <div class="column col-12 align-self-center">
+            <h6>Vols demanar una comanda?</h6>
+            <form class="row col-lg-7 col-12 m-0 p-0" method="#" action="eleccio.html">
+                <div class="col-md-6 col-sm-12 p-0">
+                    <input class="form-control" id="name" type="text" placeholder="Name">
                 </div>
-            </div>
+                <div class="col-md-3 col-lg-4 col-12 p-0 pl-md-3 mt-2 mt-md-auto">
+                    <input class="form-control" id="date" type="time" value="12:00">
+                </div>
+                <div class="col-md-3 col-lg-2 col-12 p-0 pl-md-3 mt-2 mt-md-auto">
+                    <button type="submit" onclick="guardardades()" class="btn btn-primary w-100">Començar</button>
+                </div>
+            </form>
         </div>
     </header>
+
     <!-- FOOTER -->
     <footer class="footer">
         <div class="w-100">
@@ -129,8 +107,10 @@
             </div>
         </div>
     </footer>
-    <script type="text/javascript" src="assets/js/database.js"></script>
-    <script type="text/javascript" src="assets/js/pagar.js"></script>
+
+    <!-- Fontawesome script -->
+    <script type="text/javascript" src="assets/js/index.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
@@ -140,7 +120,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-
 </body>
 
 </html>

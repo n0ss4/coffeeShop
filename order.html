@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Cafè Facultat de Ciències - Buy</title>
+    <title>Cafè Facultat de Ciències - Order</title>
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
@@ -13,7 +13,6 @@
 </head>
 
 <body>
-    <!-- NAVBAR General -->
     <nav class="navbar navbar-transparent fixed-top">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,15 +55,15 @@
         <div class="step-counter"><a href="sandwitch.html">1</a></div>
         <div class="step-name">Bocates</div>
     </div>
-    <div class="stepper-item completed">
+    <div class="stepper-item active">
         <div class="step-counter"><a href="beguda.html">2</a></div>
         <div class="step-name">Begudes</div>
     </div>
-    <div class="stepper-item completed">
+    <div class="stepper-item">
         <div class="step-counter"><a href="altres.html">3</a></div>
         <div class="step-name">Altres</div>
     </div>
-    <div class="stepper-item active">
+    <div class="stepper-item">
         <div class="step-counter">4</div>
         <div class="step-name">Pagar</div>
     </div>
@@ -72,19 +71,24 @@
 -->
     <header class="" style="">
         <div class="container">
-            <h1>Altres</h1>
+            <h1>Bocates</h1>
             <div class="row col-12">
-
+                <div class="col-md-8">
+                    <main id="items" class="row"></main>
+                    <!--Biquini-->
+                    <main id="items1" class="row"></main>
+                    <!--Llom-->
+                    <main id="items2" class="row"></main>
+                    <!--Truita-->
+                </div>
                 <div class="col-md-4">
                     <aside>
-                        <h2>Carro</h2>
+                        <h2>Carrito</h2>
                         <ul id="carrito" class="list-group"></ul>
                         <hr>
                         <p class="text-right">Total: <span id="total"></span>&euro;</p>
-                        <div class="row">
-                            <button id="modify" class="btn btn-danger">Modificar</button>
-                            <button id="confirm" class="btn btn-danger">Confirmar</button>
-                        </div>
+                        <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                        <button onclick="window.open('beguda.html','_self')" class="btn btn-success">Siguiente</button>
                     </aside>
                 </div>
             </div>
@@ -130,7 +134,8 @@
         </div>
     </footer>
     <script type="text/javascript" src="assets/js/database.js"></script>
-    <script type="text/javascript" src="assets/js/pagar.js"></script>
+    <script type="text/javascript" src="assets/js/functionsCarrito.js"></script>
+    <script type="text/javascript" src="assets/js/sandwitch.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
