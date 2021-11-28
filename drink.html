@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Cafè Facultat de Ciències - Others</title>
+    <title>Cafè Facultat de Ciències - Drinks</title>
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
@@ -56,23 +56,26 @@
         <div class="step-name">Bocates</div>
     </div>
     <div class="stepper-item completed">
-        <div class="step-counter"><a href="beguda.html">2</a></div>
+        <div class="step-counter"><a href="drink.html">2</a></div>
         <div class="step-name">Begudes</div>
     </div>
-    <div class="stepper-item completed">
-        <div class="step-counter"><a href="altres.html">3</a></div>
+    <div class="stepper-item active">
+        <div class="step-counter"><a href="deserts.html">3</a></div>
         <div class="step-name">Altres</div>
     </div>
-    <div class="stepper-item active">
+    <div class="stepper-item">
         <div class="step-counter">4</div>
         <div class="step-name">Pagar</div>
     </div>
-</div>
--->
+</div>-->
+
     <header class="" style="">
+
         <div class="container">
-            <h1>Altres</h1>
+            <h1>Beguda</h1>
+
             <div class="row col-12">
+                <!-- Elementos generados a partir del JSON -->
                 <div class="col-md-8">
                     <main id="items" class="row"></main>
                     <!--Biquini-->
@@ -80,6 +83,8 @@
                     <!--Llom-->
                     <main id="items2" class="row"></main>
                     <!--Truita-->
+                    <main id="items3" class="row"></main>
+                    <!--suc-->
                 </div>
 
                 <div class="col-md-4">
@@ -89,7 +94,7 @@
                         <hr>
                         <p class="text-right">Total: <span id="total"></span>&euro;</p>
                         <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
-                        <!--<button onclick="window.open('beguda.html','_self')" class="btn btn-success" >Siguiente</button>-->
+                        <button onclick="window.open('selectorOther.html','_self')" class="btn btn-success" >Altres</button>
                     </aside>
                 </div>
             </div>
@@ -136,7 +141,7 @@
     </footer>
     <script type="text/javascript" src="assets/js/database.js"></script>
     <script type="text/javascript" src="assets/js/functionsCarrito.js"></script>
-    <script type="text/javascript" src="assets/js/altres.js"></script>
+    <script type="text/javascript" src="assets/js/beguda.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>

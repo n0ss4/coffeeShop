@@ -5,19 +5,7 @@ const DOMcarrito = document.querySelector('#carrito');
 const DOMtotal = document.querySelector('#total');
 const miLocalStorage = window.localStorage;
 
-/**
- * Evento para añadir un producto al carrito de la compra
- */
-function anyadirProductoAlCarrito(evento) {
-    // Anyadimos el Nodo a nuestro carrito
-    carrito.push(evento.target.getAttribute('marcador'));
-    // Calculo el total
-    calcularTotal();
-    // Actualizamos el carrito
-    renderizarCarrito();
-    // Actualizamos el LocalStorage
-    guardarCarritoEnLocalStorage();
-}
+
 
 /**
  * Dibuja todos los productos guardados en el carrito
@@ -52,19 +40,16 @@ function renderizarCarrito() {
 /**
  * Evento para borrar un elemento del carrito
  */
-function borrarItemCarrito(evento) {
+function borrarItemCarrito() {
     // Obtenemos el producto ID que hay en el boton pulsado
-    const id = evento.target.dataset.item;
-    // Borramos todos los productos
     carrito = carrito.filter((carritoId) => {
-        return carritoId !== id;
+        return carritoId !== "100" & carritoId !== "101" & carritoId !== "102" & carritoId !== "103" &
+        carritoId !== "104" & carritoId !== "105" & carritoId !== "106" & carritoId !== "107" & carritoId !== "108"
+        & carritoId !== "109";
     });
-    // volvemos a renderizar
-    renderizarCarrito();
-    // Calculamos de nuevo el precio
-    calcularTotal();
-    // Actualizamos el LocalStorage
     guardarCarritoEnLocalStorage();
+    window.location.replace("menu.html");
+
 
 }
 
@@ -87,20 +72,6 @@ function calcularTotal() {
     DOMtotal.textContent = total.toFixed(2);
 }
 
-/**
- * Varia el carrito y vuelve a dibujarlo
- */
-function vaciarCarrito() {
-    // Limpiamos los productos guardados
-    carrito = [];
-    // Renderizamos los cambios
-    renderizarCarrito();
-    calcularTotal();
-    // Borra LocalStorage
-    //localStorage.clear();
-    localStorage.removeItem('carrito');
-
-}
 
 function guardarCarritoEnLocalStorage () {
     miLocalStorage.setItem('carrito', JSON.stringify(carrito));
