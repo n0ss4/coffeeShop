@@ -1,6 +1,6 @@
 .menu{
-    height: 100vh;
-  }
+    height: 80vh;
+}
   
 .sandwich{
     background-image: url('https://images.pexels.com/photos/5419214/pexels-photo-5419214.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
@@ -29,6 +29,16 @@
 
 .pastries{
     background-image: url('https://images.pexels.com/photos/6419601/pexels-photo-6419601.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+}
+
+.menu-card{
+    background-image: url('https://images.pexels.com/photos/6605778/pexels-photo-6605778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+}
+
+.choose{
+    background-image: url('https://images.pexels.com/photos/4921400/pexels-photo-4921400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     background-size: cover;
 }
 
