@@ -50,18 +50,21 @@
 </nav>
 
 <header class="" style="">
+
     <div class="container">
-        <h1>Finalitza Pagament</h1>
-            <div class="col-md-4">
-                <aside>
-                    <h2>Carrito</h2>
-                    <ul id="carrito" class="list-group"></ul>
-                    <hr>
-                    <p class="text-right">Total: <span id="total"></span>&euro;</p>
-                    <button id="boton-pay" onclick="window.open('payMade.html','_self')" class="btn btn-success">Pay</button>
-                </aside>
+        <div class="alert alert-success" id="alert" role="alert" style="cursor:pointer;opacity:.85">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong>Success!</strong> You have been signed in successfully!
+            <div class="progress active" role="progressbar" style="height:5px">
+                <div class="progress-bar bg-success" id="pb" style="width:100%;opacity:0.5"></div>
             </div>
+        </div>
     </div>
+
+
+
+
+
 </header>
 
 <!-- FOOTER -->
@@ -103,8 +106,10 @@
         </div>
     </div>
 </footer>
-<script type="text/javascript" src="assets/js/database.js"></script>
-<script type="text/javascript" src="assets/js/payConfirm.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="assets/js/payMade.js"></script>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
 </script>
@@ -114,6 +119,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 </script>
+
 
 </body>
 
