@@ -34,3 +34,23 @@ body{
 button.navbar-toggler:active{
     background-color: white;
 }
+
+
+
+body {
+    padding: 25px;
+}
+
+.alert {
+    position: relative;
+}
+
+.progress {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+}
+.progress-bar {
+    transition: none !important;
+}
