@@ -1,3 +1,6 @@
+var carrito = [];
+const miLocalStorage = window.localStorage;
+
 function recopilarMenu(){
 
     if(document.getElementById('flexRadioPrimer1').checked) {
@@ -33,6 +36,7 @@ function recopilarMenu(){
     guardarCarritoEnLocalStorage();
 
 }
+
 window.onload = function () {
 
     document.getElementById("flexRadioPrimer1id").innerHTML = baseDeDatos.find(o => o.id == "100").nombre;
@@ -51,20 +55,12 @@ window.onload = function () {
 
 }
 
-
-var carrito = [];
-const miLocalStorage = window.localStorage;
-
-
-
 function guardarCarritoEnLocalStorage () {
     miLocalStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
 function cargarCarritoDeLocalStorage () {
-    // ¿Existe un carrito previo guardado en LocalStorage?
     if (miLocalStorage.getItem('carrito') !== null) {
-        // Carga la información
         carrito = JSON.parse(miLocalStorage.getItem('carrito'));
     }
 }

@@ -18,18 +18,25 @@ function renderizarCarrito() {
         const miNodo = document.createElement('li');
         miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
         miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}€`;
+        const miBoton = document.createElement('button');
+        miBoton.classList.add('btn', 'btn-danger', 'mx-5');
+        miBoton.textContent = 'X';
+        miBoton.style.marginLeft = '1rem';
+        miBoton.dataset.item = item;
+        miBoton.addEventListener('click', borrarItemCarrito);
+        miNodo.appendChild(miBoton);
         DOMcarrito.appendChild(miNodo);
     });
 }
 
-function borrarItemCarrito() {
+function borrarItemCarrito(evento) {
+    const id = evento.target.dataset.item;
     carrito = carrito.filter((carritoId) => {
-        return carritoId !== "100" & carritoId !== "101" & carritoId !== "102" & carritoId !== "103" &
-        carritoId !== "104" & carritoId !== "105" & carritoId !== "106" & carritoId !== "107" & carritoId !== "108"
-        & carritoId !== "109";
+        return carritoId !== id;
     });
+    renderizarCarrito();
+    calcularTotal();
     guardarCarritoEnLocalStorage();
-    window.location.replace("menu.html");
 }
 
 function calcularTotal() {

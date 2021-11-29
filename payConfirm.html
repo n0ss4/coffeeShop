@@ -3,27 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Cafè Facultat de Ciències - Buy</title>
+    <title>Cafè Facultat de Ciències - Others</title>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
-
 </head>
 
 <body>
-<!-- NAVBAR General -->
 <nav class="navbar navbar-transparent fixed-top">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand mr-auto ml-3 pt-1" href="./index.html">Cafè Facultat de Ciències</a>
+    <a class="navbar-brand mr-auto ml-3 pt-1" href="#">Cafè Facultat de Ciències</a>
     <div id="navbarCollapse" class="collapse navbar-collapse">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
+                <a href="index.html" class="nav-link active">
                     Home
                 </a>
             </li>
@@ -51,26 +49,21 @@
     </div>
 </nav>
 
-
-<header class="" style="padding-top: 20vh">
-
+<header class="" style="">
     <div class="container">
-        <div class="row col-12">
+        <h1>Finalitza Pagament</h1>
             <div class="col-md-4">
-                <a href="sandwitc.html">Entrepans</a>
-            </div>
+                <aside>
+                    <h2>Carrito</h2>
+                    <ul id="carrito" class="list-group"></ul>
+                    <hr>
+                    <p class="text-right">Total: <span id="total"></span>&euro;</p>
+                    <button id="boton-pay" class="btn btn-success">Pay</button>
 
-            <div class="col-md-4">
-                <a href="drink.html">Begudes</a>
+                </aside>
             </div>
-            <div class="col-md-4">
-                <a href="selectorOther.html">Altres</a>
-            </div>
-        </div>
-
     </div>
 </header>
-
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -112,7 +105,7 @@
     </div>
 </footer>
 <script type="text/javascript" src="assets/js/database.js"></script>
-<script type="text/javascript" src="assets/js/confirmMenu.js"></script>
+<script type="text/javascript" src="assets/js/payConfirm.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
 </script>

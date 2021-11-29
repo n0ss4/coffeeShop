@@ -3,7 +3,7 @@ const baseDeDatos = [
         id: 1,
         nombre: 'Biquini pa de motlle',
         precio: 1.18,
-        imagen: 'sandwich.png',
+        imagen: '/assets/img/sandwich.png',
         categoria: 'biquini'
     },
     {
