@@ -1,0 +1,37 @@
+.menu{
+    height: 100vh;
+  }
+  
+.sandwich{
+    background-image: url('https://images.pexels.com/photos/5419214/pexels-photo-5419214.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+}
+
+.title-card h2{
+    color: white;
+    font-family: Arial;
+    font-size: 20px;
+}
+
+.title-card{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.drink{
+    background-image: url('https://images.pexels.com/photos/2668308/pexels-photo-2668308.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+}
+
+.pastries{
+    background-image: url('https://images.pexels.com/photos/6419601/pexels-photo-6419601.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+}
+
+a{
+    text-decoration: none;
+}
