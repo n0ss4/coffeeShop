@@ -3,6 +3,10 @@ var chunks = 5;
 
 $('.alert').click(function() {
     $(".alert").alert('close');
+    localStorage.removeItem('carrito');
+    localStorage.removeItem('name');
+    localStorage.removeItem('date');
+    window.location.href = "index.html";
 });
 
 $('.alert').hover(function() {
