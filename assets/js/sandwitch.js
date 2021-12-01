@@ -26,9 +26,12 @@ window.onload = function () {
                 miNodoVegeteria.style.width='20px';
                 miNodoVegeteria.setAttribute('src','assets/img/vegan.png');
             }
-
+            const miNodoCeliaco= document.createElement('img');
             if(info.celiac){
-
+                miNodoCeliaco.classList.add('img-fluid');
+                miNodoCeliaco.style.height='20px';
+                miNodoCeliaco.style.width='20px';
+                miNodoCeliaco.setAttribute('src','assets/img/celiaco.png');
             }
 
             const miNodoImagen = document.createElement('img');
@@ -48,6 +51,9 @@ window.onload = function () {
             miNodoCardBody.appendChild(miNodoIngredientes);
             if(info.vegeteria){
                 miNodoCardBody.appendChild(miNodoVegeteria);
+            }
+            if(info.celiac){
+                miNodoCardBody.appendChild(miNodoCeliaco);
             }
             miNodoCardBody.appendChild(miNodoPrecio);
             miNodoCardBody.appendChild(miNodoBoton);
