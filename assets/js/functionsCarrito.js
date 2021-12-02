@@ -66,7 +66,18 @@
 
             DOMcarrito.appendChild(li);
         });
-        document.getElementById("contadorProductos").innerHTML = total;
+
+        document.getElementById("contadorProductos1").innerHTML = '+1';
+
+        setTimeout(function(){
+            if(total>99){
+                document.getElementById("contadorProductos").innerHTML = '99+';
+                document.getElementById("contadorProductos1").innerHTML = '99+';
+            }else{
+                document.getElementById("contadorProductos").innerHTML = total;
+                document.getElementById("contadorProductos1").innerHTML = total;
+            }
+            },1000);
 
     }
 
