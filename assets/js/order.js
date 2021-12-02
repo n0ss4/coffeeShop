@@ -35,6 +35,7 @@ function cargarCarritoDeLocalStorage () {
 }
 
 function renderizarCarrito() {
+    var total=0;
     DOMcarrito.textContent = '';
     const carritoSinDuplicados = [...new Set(carrito)];
     carritoSinDuplicados.forEach((item) => {
