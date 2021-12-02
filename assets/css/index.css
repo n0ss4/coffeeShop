@@ -10,6 +10,12 @@ form .input-group{
     height: 100%;
 }
 
+/* Eliminar el timepicker per defecte del navegador */
+input[type="time"]::-webkit-calendar-picker-indicator {
+    background: none;
+    display:none;
+}
+
 #date,#name{
     border-left: none;
     border-radius: 0;
