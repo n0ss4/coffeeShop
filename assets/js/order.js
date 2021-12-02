@@ -1,9 +1,9 @@
 window.onload = function () {
+    let nameStorage;
 
     const miLocalStorage = window.localStorage;
     nameStorage = JSON.parse(miLocalStorage.getItem('name'));
 
-    let nameStorage;
     if(document.getElementById('name').value==null){
         //window.location.href = "index.html";
         document.getElementById("name").innerHTML=nameStorage;
