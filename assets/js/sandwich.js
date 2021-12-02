@@ -7,7 +7,7 @@ window.onload = function () {
 
             const sandwich = document.createElement('a');
             sandwich.setAttribute('href', '#!');
-            sandwich.classList.add('card', 'card-top', 'col-xxl-3', 'col-xl-4', 'col-lg-6', 'col-md-6', 'col-12', 'd-flex', 'flex-column');
+            sandwich.classList.add('card', 'card-top', 'col-xxl-3', 'col-xl-4', 'col-lg-6', 'col-md-6', 'col-12', 'd-flex', 'flex-column', 'mb-2');
             sandwich.setAttribute('marcador', info.id);
             sandwich.addEventListener('click', anyadirProductoAlCarrito);
 

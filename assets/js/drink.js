@@ -1,46 +1,41 @@
 window.onload = function () {
-    const DOMitems = document.querySelector('#items');//Aigua
-    const DOMitems1 = document.querySelector('#items1');//Cervesa
-    const DOMitems2 = document.querySelector('#items2');//Beguda
-    const DOMitems3 = document.querySelector('#items3');//suc
+    const DOMitems = document.querySelector('#drink');
 
     function renderizarProductos() {
         baseDeDatos.forEach((info) => {
-            const miNodo = document.createElement('div');
-            miNodo.classList.add('card', 'col-sm-4');
-            const miNodoCardBody = document.createElement('div');
-            miNodoCardBody.classList.add('card-body');
-            const miNodoTitle = document.createElement('h5');
-            miNodoTitle.classList.add('card-title');
-            miNodoTitle.textContent = info.nombre;
-            const miNodoImagen = document.createElement('img');
-            miNodoImagen.classList.add('img-fluid');
-            miNodoImagen.setAttribute('src', info.imagen);
-            const miNodoPrecio = document.createElement('p');
-            miNodoPrecio.classList.add('card-text');
-            miNodoPrecio.textContent = info.precio + '€';
-            const miNodoBoton = document.createElement('button');
-            miNodoBoton.classList.add('btn', 'btn-primary');
-            miNodoBoton.textContent = '+';
-            miNodoBoton.setAttribute('marcador', info.id);
-            miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
-            miNodoCardBody.appendChild(miNodoImagen);
-            miNodoCardBody.appendChild(miNodoTitle);
-            miNodoCardBody.appendChild(miNodoPrecio);
-            miNodoCardBody.appendChild(miNodoBoton);
-            miNodo.appendChild(miNodoCardBody);
-            if(info.categoria=='aigua'){
-                DOMitems.appendChild(miNodo);
-            }else if(info.categoria=='cervesa'){
-                DOMitems1.appendChild(miNodo);
-            }else if(info.categoria=='beguda'){
-                DOMitems2.appendChild(miNodo);
-            }else if(info.categoria=='suc'){
-                DOMitems3.appendChild(miNodo);
+            if(info.categoria=='aigua' || info.categoria=='cervesa' || info.categoria=='beguda' || info.categoria=='suc'){
+
+            const drink = document.createElement('a');
+            drink.setAttribute('href', '#!');
+            drink.classList.add('card', 'card-top', 'col-xxl-3', 'col-xl-4', 'col-lg-6', 'col-md-6', 'col-12', 'd-flex', 'flex-column', 'mb-2');
+            drink.setAttribute('marcador', info.id);
+            drink.addEventListener('click', anyadirProductoAlCarrito);
+
+                const drink_img = document.createElement('div');
+                drink_img.classList.add('col-md-12', 'h-75');
+                drink_img.style.backgroundImage = `url(.${info.imagen})`;
+                drink_img.style.backgroundSize = 'cover';
+
+                const drink_body = document.createElement('div');
+                drink_body.classList.add('d-flex', 'flex-row', 'col-12', 'h-25');
+
+                    const drink_body_p = document.createElement('p');
+                    drink_body_p.classList.add('ps-2', 'col-10');
+                    drink_body_p.innerHTML = info.nombre;
+
+                    const drink_body_span = document.createElement('span');
+                    drink_body_span.classList.add('price', 'd-flex', 'w-100', 'justify-content-end', 'pe-2', 'pt-2');
+                    drink_body_span.innerHTML = `${info.precio}€`;
+
+                drink_body.appendChild(drink_body_p);
+                drink_body.appendChild(drink_body_span);
+
+            drink.appendChild(drink_img);
+            drink.appendChild(drink_body);
+
+            DOMitems.appendChild(drink);
             }
         });
-
-
     }
     renderizarProductos();
 }
