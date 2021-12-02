@@ -1,0 +1,77 @@
+body{
+    padding: 0;
+}
+
+nav{
+    background-color: white;
+}
+
+main{
+    margin-top: 56px;
+}
+
+a, a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+@media (min-width: 1400px){
+    main{
+        height: 80vh;
+    }
+
+    .p-32{
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .title-free{
+        background-color: rgb(246, 246, 246);
+    }
+}
+
+@media (min-width: 768px){
+    .card-top{
+        height: 20vh;
+    }
+}
+
+@media (max-width: 1400px){
+    .card-top{
+        height: 20vh;
+    }
+
+    body{
+        padding: 3.5rem 2rem 0 2rem;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1200px){
+    .col-md-6{
+        width: 46%;
+        margin-left: .5rem;
+        margin-bottom: .5rem;
+    }
+
+    .col-lg-6{
+        width: 46%;
+        margin-left: .5rem;
+        margin-bottom: .5rem;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px){
+    .col-xl-4{
+        width: 32%;
+        margin-left: .5rem;
+        margin-bottom: .5rem;
+    }
+}
+
+@media (min-width: 1400px){
+    .col-xxl-3{
+        width: 22.5%;
+        margin-left: .5rem;
+        margin-bottom: .5rem;
+    }
+}
