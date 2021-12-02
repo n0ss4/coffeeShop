@@ -57,3 +57,18 @@ cargarCarritoDeLocalStorage();
 calcularTotal();
 renderizarCarrito();
 
+
+function printDiv() {
+    var divContents = document.getElementById("GFG").innerHTML;
+    var a = window.open('', '', 'height=500, width=800');
+    a.document.write('<html>');
+    a.document.write('<body > <h1>La seva comanda es: <br>');
+    a.document.write(Math.floor(Math.random() * (10000 - 0) + 0));
+    a.document.write(divContents);
+    a.document.write('</body></html>');
+    a.document.close();
+    a.print();
+    window.open('index.html','_self');
+    localStorage.removeItem('carrito');
+    localStorage.removeItem('name');
+}
