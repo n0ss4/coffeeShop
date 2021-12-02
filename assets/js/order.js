@@ -1,4 +1,8 @@
 window.onload = function () {
+
+
+
+    console.log("I am the second log");
     const miLocalStorage = window.localStorage;
     let nameStorage;
     if (miLocalStorage.getItem('name') !== null) {

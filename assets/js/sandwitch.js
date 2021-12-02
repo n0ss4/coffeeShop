@@ -12,9 +12,32 @@ window.onload = function () {
             const miNodoTitle = document.createElement('h5');
             miNodoTitle.classList.add('card-title');
             miNodoTitle.textContent = info.nombre;
+
+            const miNodoIngredientes = document.createElement('p');
+            const dins= document.createElement('i');
+            miNodoIngredientes.appendChild(dins);
+            dins.classList.add('card-title');
+            dins.textContent = "Ingredients: "+info.ingredients;
+            const miNodoVegeteria= document.createElement('img');
+
+            if(info.vegeteria){
+                miNodoVegeteria.classList.add('img-fluid');
+                miNodoVegeteria.style.height='20px';
+                miNodoVegeteria.style.width='20px';
+                miNodoVegeteria.setAttribute('src','assets/img/vegan.png');
+            }
+            const miNodoCeliaco= document.createElement('img');
+            if(info.celiac){
+                miNodoCeliaco.classList.add('img-fluid');
+                miNodoCeliaco.style.height='20px';
+                miNodoCeliaco.style.width='20px';
+                miNodoCeliaco.setAttribute('src','assets/img/celiaco.png');
+            }
+
             const miNodoImagen = document.createElement('img');
             miNodoImagen.classList.add('img-fluid');
             miNodoImagen.setAttribute('src', info.imagen);
+
             const miNodoPrecio = document.createElement('p');
             miNodoPrecio.classList.add('card-text');
             miNodoPrecio.textContent = info.precio + '€';
@@ -25,6 +48,13 @@ window.onload = function () {
             miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
             miNodoCardBody.appendChild(miNodoImagen);
             miNodoCardBody.appendChild(miNodoTitle);
+            miNodoCardBody.appendChild(miNodoIngredientes);
+            if(info.vegeteria){
+                miNodoCardBody.appendChild(miNodoVegeteria);
+            }
+            if(info.celiac){
+                miNodoCardBody.appendChild(miNodoCeliaco);
+            }
             miNodoCardBody.appendChild(miNodoPrecio);
             miNodoCardBody.appendChild(miNodoBoton);
             miNodo.appendChild(miNodoCardBody);
