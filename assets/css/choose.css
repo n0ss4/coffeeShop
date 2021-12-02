@@ -26,13 +26,6 @@ main{
     margin-top: 56px;
 }
 
-.price{
-    /*background-image: url("../img/choose/tag.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;*/
-}
-
 @media (min-width: 768px){
     main{
         height: 80vh;

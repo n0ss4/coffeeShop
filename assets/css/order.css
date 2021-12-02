@@ -1,3 +1,7 @@
+body{
+    padding: 0;
+}
+
 .menu-card, .choose{
     height: 60%;
     background-color: whitesmoke;
@@ -32,6 +36,11 @@ a, a:hover{
     main{
         height: 80vh;
     }
+
+    .p-32{
+        padding-left: 32px;
+        padding-right: 32px;
+    }
 }
 
 @media (max-width: 768px){
@@ -41,6 +50,10 @@ a, a:hover{
 
     .card-top{
         height: 20vh;
+    }
+
+    body{
+        padding: 3.5rem 2rem 0 2rem;
     }
 }
 

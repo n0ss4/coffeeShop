@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
   <link rel="stylesheet" href="./assets/css/fonts.css" type="text/css">
   <link rel="stylesheet" href="./assets/css/choose.css" type="text/css">
+  <link rel="stylesheet" href="./assets/css/cart-shop.css" type="text/css">
   <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css" type="text/css">
 
 </head>
@@ -23,7 +24,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand me-auto ms-3 title" href="./index.html">Cafè Facultat de Ciències</a>
-    <a id="shop" class="navbar-brand ms-auto me-4 pt-1" href="#">
+    <a id="shop" class="navbar-brand ms-auto me-5 pt-1" href="#">
       <svg width="24px" height="24px" fill="#111" viewBox="0 0 24 24">
         <path d="M16 7a1 1 0 0 1-1-1V3H9v3a1 1 0 0 1-2 0V3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3a1 1 0 0 1-1 1z"></path>
         <path
@@ -75,6 +76,43 @@
       </li>
     </ul>
   </section>
+
+  <div class="position-absolute shopping">
+    <div class="shopping-cart me-md-4 me-0">
+      <div class="shopping-cart-header">
+        <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
+        <div class="shopping-cart-total">
+          <span class="lighter-text">Total:</span>
+          <span class="main-color-text">$2,229.97</span>
+        </div>
+      </div> 
+  
+      <ul class="shopping-cart-items">
+        <li class="clearfix">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg" alt="item1" />
+          <span class="item-name">Sony DSC-RX100M III</span>
+          <span class="item-price">$849.99</span>
+          <span class="item-quantity">Quantity: 01</span>
+        </li>
+  
+        <li class="clearfix">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item2.jpg" alt="item1" />
+          <span class="item-name">KS Automatic Mechanic...</span>
+          <span class="item-price">$1,249.99</span>
+          <span class="item-quantity">Quantity: 01</span>
+        </li>
+  
+        <li class="clearfix">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item3.jpg" alt="item1" />
+          <span class="item-name">Kindle, 6" Glare-Free To...</span>
+          <span class="item-price">$129.99</span>
+          <span class="item-quantity">Quantity: 01</span>
+        </li>
+      </ul>
+  
+      <a href="./payConfirm.html" class="button">Checkout</a>
+    </div>
+  </div>
 
   <main class="d-md-flex flex-md-column">
     <section class="col-12 h-25 d-flex title-free align-items-center p-32">
@@ -160,9 +198,10 @@
   </footer>
 
   <script type="text/javascript" src="./assets/fontawesome/js/all.min.js"></script>
-  <script type="text/javascript" src="./assets/jquery/jquery-3.3.1.slim.min.js"></script>
+  <script type="text/javascript" src="./assets/jquery/js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="./assets/popper/popper.min.js"></script>
   <script type="text/javascript" src="./assets/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./assets/js/cart-shop.js"></script>
 
 </body>
 
