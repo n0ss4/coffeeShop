@@ -1,0 +1,82 @@
+@font-face {
+    font-family: "Really Sans Light";
+    src: url('../fonts/really_sans/ReallySansSmallStudent-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: "Really Sans Regular";
+    src: url("../fonts/really_sans/ReallySansSmallStudent-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Really Sans Bold";
+    src: url("../fonts/really_sans/ReallySansSmallStudent-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Really Sans Black";
+    src: url("../fonts/really_sans/ReallySansSmallStudent-Black.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Really Sans Italic";
+    src: url("../fonts/really_sans/ReallySansSmallStudent-Italic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Really Sans Light Italic";
+    src: url("../fonts/really_sans/ReallySansSmallStudent-LightItalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Really Sans Medium";
+    src: url("../fonts/really_sans/ReallySansSmallStudent-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Really Sans Medium Italic";
+    src: url("../fonts/really_sans/ReallySansSmallStudent-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Really Sans Bold Italic";
+    src: url("../fonts/really_sans/ReallySansSmallStudent-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Really Sans Black Italic";
+    src: url("../fonts/really_sans/ReallySansSmallStudent-BlackItalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Really Sans Semibold";
+    src: url("../fonts/really_sans/ReallySansSmallStudent-Semibold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Really Sans Semibold Italic";
+    src: url("../fonts/really_sans/ReallySansSmallStudent-SemiboldItalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Really Sans Hairline";
+    src: url("../fonts/really_sans/ReallySansLargeStudent-Hairline.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Really Sans Ultra Italic";
+    src: url("../fonts/really_sans/ReallySansLargeStudent-UltraItalic.woff") format("woff");
+}
+
+
+h1, h2, .title{
+    font-family: "Really Sans Semibold";
+}
+
+h3,h4,h5,h6 {
+    font-family: "Really Sans Light";
+}
+
+p,a,li,span,button,label,input,textarea,select{
+    font-family: "Really Sans Regular";
+}

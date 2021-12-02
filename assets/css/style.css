@@ -1,11 +1,14 @@
+/* Estil general per la web */
+
 body{
-    background-color: #FFE3AC;
-    height: 100vh;
-    max-height: 100vh;
+    background-color: white;
+    min-height: 100vh;
     padding: 3.5rem 2rem 0 2rem;
     display: flex;
     flex-direction: column;
 }
+
+/* Estils generals del nav */
 
 .navbar-transparent a, .navbar-transparent div ul li a{
     color: black;
@@ -26,20 +29,48 @@ button.navbar-toggler:active{
     background-color: white;
 }
 
+.active{
+    background-color: black !important;
+}
+
+.offcanvas-start{
+    width: 300px;
+}
+
+#shop:hover{
+    background-color: #e5e5e5;
+    border-radius: 1rem;
+}
+
+.navbar-custom-toggler:focus{
+    box-shadow: none;
+}
+
+.navbar-custom-toggler:active{
+    background-color: transparent !important;
+}
+
+/* Footer general */
+
 footer{
     text-align: center;
 }
 
-.alert {
-    position: relative;
+footer svg{
+    color: black;
 }
 
-.progress {
-    position: absolute;
-    width: 100%;
-    bottom: 0px;
-    left: 0px;
+footer a:hover, footer svg:hover{
+    color: #FFE3AC;
 }
-.progress-bar {
-    transition: none !important;
+
+footer a{
+    color: black;
+    text-decoration: none;
+}
+
+/* Classe per els main (mentre que el height no sigui major que 100vh) */
+
+.h75{
+    height: 75vh;
 }

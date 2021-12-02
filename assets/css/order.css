@@ -1,0 +1,58 @@
+.menu-card, .choose{
+    height: 60%;
+    background-color: whitesmoke;
+}
+
+.product-damm{
+    background-image: url("../img/order/estrella-damm.png");
+    background-size: cover;
+}
+
+.product-trig{
+    background-image: url("../img/order/triangle-xocolata.png");
+    background-size: 100% 200%;
+}
+
+.product-biq{
+    background-image: url("../img/order/biquini-formatge.png");
+    background-size: cover;
+}
+
+.product-vegp{
+    background-image: url("../img/order/vegetal-de-pollo.png");
+    background-size: cover;
+}
+
+a, a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+@media (min-width: 768px){
+    main{
+        height: 80vh;
+    }
+}
+
+@media (max-width: 768px){
+    .card{
+        height: 12.5vh;
+    }
+
+    .card-top{
+        height: 20vh;
+    }
+}
+
+@media screen and (max-width: 768px){
+    nav{
+        background-color: white;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1200px){
+    .col-md-3{
+        width: 22.5%;
+        margin-left: .5rem;
+    }
+}

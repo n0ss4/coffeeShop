@@ -26,3 +26,19 @@ function guardardades(){
         }, false)
       })
   })()
+
+
+  // timepicker
+  $(document).ready(function(){
+    $('#date').timepicker({
+        timeFormat: 'HH:mm',
+        interval: 30,
+        minTime: '8:00am',
+        maxTime: '6:00pm',
+        defaultTime: '12',
+        startTime: '8:00',
+        dynamic: false,
+        dropdown: true,
+        scrollbar: true
+    });
+});

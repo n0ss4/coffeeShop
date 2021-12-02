@@ -1,0 +1,35 @@
+body{
+    background-color: #FFEBCC;
+}
+
+form{
+    height: 3rem;
+}
+
+form .input-group{
+    height: 100%;
+}
+
+#date,#name{
+    border-left: none;
+    border-radius: 0;
+    height: 100% !important;
+}
+
+#date:focus, #name:focus{
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+.search{
+    border-radius:0;
+}
+
+#inputGroupPrepend{
+    background-color: white;
+    border-radius: 0;
+}
+
+footer a:hover, footer svg:hover{
+    color: whitesmoke;
+}

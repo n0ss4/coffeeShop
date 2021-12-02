@@ -1,0 +1,72 @@
+body{
+    padding: 0;
+}
+
+.drink, .sandwich, .dessert {
+    height: 60%;
+    background-color: whitesmoke;
+}
+
+a, a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.product-damm{
+    background-image: url("../img/order/estrella-damm.png");
+    background-size: cover;
+}
+
+.product-trig{
+    background-image: url("../img/order/triangle-xocolata.png");
+    background-size: 100% 200%;
+}
+
+.price{
+    /*background-image: url("../img/choose/tag.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;*/
+}
+
+@media (min-width: 768px){
+    main{
+        height: 80vh;
+    }
+
+    .p-32{
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .title-free{
+        background-color: rgb(246, 246, 246);
+    }
+}
+
+@media (max-width: 768px){
+    .card{
+        height: 12.5vh;
+    }
+
+    .card-top{
+        height: 20vh;
+    }
+
+    body{
+        padding: 3.5rem 2rem 0 2rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    nav{
+        background-color: white;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1200px){
+    .col-md-3{
+        width: 22.5%;
+        margin-left: .5rem;
+    }
+}

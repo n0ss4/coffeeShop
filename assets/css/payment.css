@@ -1,0 +1,14 @@
+.alert {
+    position: relative;
+}
+
+.progress {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+}
+
+.progress-bar {
+    transition: none !important;
+}
