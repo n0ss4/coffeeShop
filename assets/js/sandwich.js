@@ -1,10 +1,10 @@
 window.onload = function () {
-    const DOMitems = document.querySelector('#sandwich');
-
     function renderizarProductos() {
         baseDeDatos.forEach((info) => {
             if(info.categoria=='biquini' || info.categoria=='llom' || info.categoria=='truita'){
 
+            const DOMitems = document.querySelector('#sandwich');
+            
             const sandwich = document.createElement('a');
             sandwich.setAttribute('href', '#!');
             sandwich.classList.add('card', 'card-top', 'col-xxl-3', 'col-xl-4', 'col-lg-6', 'col-md-6', 'col-12', 'd-flex', 'flex-column', 'mb-2');

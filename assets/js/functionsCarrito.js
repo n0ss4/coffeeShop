@@ -7,10 +7,17 @@
     const miLocalStorage = window.localStorage;
 
     function anyadirProductoAlCarrito(evento) {
-        carrito.push(evento.target.getAttribute('marcador'));
-        calcularTotal();
-        renderizarCarrito();
-        guardarCarritoEnLocalStorage();
+
+        if(evento.target.parentElement.getAttribute('marcador') != undefined){
+            carrito.push(evento.target.parentElement.getAttribute('marcador'));
+            calcularTotal();
+            renderizarCarrito();
+            guardarCarritoEnLocalStorage();
+        }else{
+            console.log({evento_target: evento.target});
+        }
+
+        
     }
 
     function renderizarCarrito() {
@@ -23,7 +30,7 @@
             const numeroUnidadesItem = carrito.reduce((total, itemId) => {
                 return itemId === item ? total += 1 : total;
             }, 0);
-            const miNodo = document.createElement('li');
+            /*const miNodo = document.createElement('li');
             miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
             miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}€`;
             const miBoton = document.createElement('button');
@@ -33,7 +40,7 @@
             miBoton.dataset.item = item;
             miBoton.addEventListener('click', borrarItemCarrito);
             miNodo.appendChild(miBoton);
-            DOMcarrito.appendChild(miNodo);
+            DOMcarrito.appendChild(miNodo);*/
         });
     }
 
