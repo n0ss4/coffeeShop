@@ -36,6 +36,10 @@
   position: relative;
   border-radius: 3px;
   padding: 20px;
+  max-height: 70vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #d4a866 #e0e0e0;
 }
 
 .shopping-cart .shopping-cart-header {
@@ -75,6 +79,16 @@
 
 .shopping-cart .shopping-cart-items .item-quantity {
   color: #ABB0BE;
+}
+
+.shopping-cart .shopping-cart-items .item-remove {
+  color: #757575;
+  display: block;
+  text-decoration: underline;
+}
+
+.shopping-cart .shopping-cart-items .item-remove:hover {
+  opacity: .7;
 }
 
 .shopping-cart:after {

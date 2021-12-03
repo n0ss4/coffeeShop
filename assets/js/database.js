@@ -173,7 +173,7 @@ const baseDeDatos = [
         id: 18,
         nombre: 'Got de llet',
         precio: 0.40,
-        imagen: '/assets/img/drinks/gotdellet.png/',
+        imagen: '/assets/img/drinks/gotdellet.png',
         categoria: 'beguda',
         vegeteria: null,
         celiac: null,

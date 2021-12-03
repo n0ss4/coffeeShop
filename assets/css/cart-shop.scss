@@ -39,6 +39,10 @@ $zindex-dropdown: 1000;
   position: relative;
   border-radius: 3px;
   padding: 20px;
+  max-height: 70vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #d4a866 #e0e0e0;
   
   
   .shopping-cart-header {
@@ -80,6 +84,17 @@ $zindex-dropdown: 1000;
     .item-quantity {
       color: $light-text;
     }
+
+    .item-remove{
+      color: #757575;
+      display: block;
+      text-decoration: underline;
+    }
+
+    .item-remove:hover{
+      opacity: .7;
+    }
+
   }
    
 }

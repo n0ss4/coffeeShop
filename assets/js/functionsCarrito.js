@@ -32,6 +32,48 @@ function showModal(evento) {
     }
 }
 
+function buildCart(item, quantity){
+    const li = document.createElement('li');
+    li.classList.add('clearfix');
+
+    const img = document.createElement('img');
+    img.setAttribute('alt', item.nombre);
+    img.style.width = '70px';
+    img.style.height = '70px';
+    img.setAttribute('src', item.imagen);
+    $(img).on("error", function () {
+        $(this).attr("src", "https://via.placeholder.com/70x70");
+    });
+
+    const nom = document.createElement('span');
+    nom.classList.add('item-name');
+    nom.textContent = `${item.nombre}`;
+    nom.style.whiteSpace = 'nowrap';
+
+    const preu = document.createElement('span');
+    preu.classList.add('item-price');
+    preu.textContent = `${item.precio}€`;
+
+    const quantitat = document.createElement('span');
+    quantitat.classList.add('item-quantity');
+    quantitat.textContent = "Quantity: " + quantity;
+
+    const remove = document.createElement('a');
+    remove.classList.add('item-remove');
+    remove.setAttribute('href', '#!');
+    remove.dataset.item = item.id;
+    remove.addEventListener('click', borrarItemCarrito);
+    remove.textContent = 'Remove';
+
+    li.appendChild(img);
+    li.appendChild(nom);
+    li.appendChild(preu);
+    li.appendChild(quantitat);
+    li.appendChild(remove);
+
+    DOMcarrito.appendChild(li);
+}
+
 function renderizarCarrito() {
     var total = 0;
     DOMcarrito.textContent = '';
@@ -45,40 +87,7 @@ function renderizarCarrito() {
             return itemId === item ? total += 1 : total;
         }, 0);
 
-        const li = document.createElement('li');
-        li.classList.add('clearfix')
-
-        const img = document.createElement('img');
-        img.setAttribute('alt', 'item1');
-        img.style.width = '30px';
-        img.style.height = '30px';
-        img.setAttribute('src', miItem[0].imagen);
-
-        const nom = document.createElement('span');
-        nom.classList.add('item-name');
-        nom.textContent = `${miItem[0].nombre}`;
-
-        const preu = document.createElement('span');
-        preu.classList.add('item-name');
-        preu.textContent = `${miItem[0].precio}€`;
-
-        const quantitat = document.createElement('span');
-        quantitat.classList.add('item-name');
-        quantitat.textContent = `Quantity: ${numeroUnidadesItem}`;
-
-        const miBoton = document.createElement('button');
-        miBoton.classList.add('btn', 'btn-danger', 'mx-5');
-        miBoton.textContent = 'X';
-        miBoton.style.marginLeft = '1rem';
-        miBoton.dataset.item = item;
-        miBoton.addEventListener('click', borrarItemCarrito);
-        li.appendChild(img);
-        li.appendChild(nom);
-        li.appendChild(preu);
-        li.appendChild(quantitat)
-        li.appendChild(miBoton);
-
-        DOMcarrito.appendChild(li);
+        buildCart(miItem[0], numeroUnidadesItem);
     });
 
     document.getElementById("contadorProductos1").innerHTML = '+1';
