@@ -36,7 +36,7 @@
     </nav>
 
     <section class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
-             aria-labelledby="offcanvasExampleLabel">
+        aria-labelledby="offcanvasExampleLabel">
         <ul class="offcanvas-body nav h-100 nav-pills flex-column mb-auto">
             <li class="nav-item">
                 <a href="index.html" class="nav-link link-dark" aria-current="page">
@@ -95,6 +95,24 @@
         </div>
     </div>
 
+    <div class="modal fade" id="info" tabindex="-1" aria-labelledby="infoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <a id="ingredients"></a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="addToCard">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <main class="d-md-flex flex-md-column">
         <section class="col-12 d-flex title-free align-items-center p-32">
@@ -135,14 +153,14 @@
         </div>
     </footer>
 
-    <script type="text/javascript" src="assets/js/database.js"></script>
-    <script type="text/javascript" src="assets/js/functionsCarrito.js"></script>
-    <script type="text/javascript" src="assets/js/deserts.js"></script>
     <script type="text/javascript" src="./assets/fontawesome/js/all.min.js"></script>
     <script type="text/javascript" src="./assets/jquery/js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="./assets/popper/popper.min.js"></script>
     <script type="text/javascript" src="./assets/bootstrap/js/bootstrap.min.js"></script>
     </script>
+    <script type="text/javascript" src="assets/js/database.js"></script>
+    <script type="text/javascript" src="assets/js/functionsCarrito.js"></script>
+    <script type="text/javascript" src="assets/js/deserts.js"></script>
     <script type="text/javascript" src="./assets/js/cart-shop.js"></script>
 
 </body>
