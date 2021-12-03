@@ -45,6 +45,7 @@ a, a:hover{
 }
 
 @media (max-width: 1400px){
+
     body{
         padding: 3.5rem 2rem 0 2rem;
     }

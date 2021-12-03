@@ -11,24 +11,24 @@ window.onload = function () {
             drink.setAttribute('marcador', info.id);
             drink.addEventListener('click', anyadirProductoAlCarrito);
 
-                const drink_img = document.createElement('div');
-                drink_img.classList.add('col-md-12', 'h-75');
-                drink_img.style.backgroundImage = `url(.${info.imagen})`;
-                drink_img.style.backgroundSize = 'cover';
+            const drink_img = document.createElement('div');
+            drink_img.classList.add('col-md-12', 'card-img');
+            drink_img.style.backgroundImage = `url(.${info.imagen})`;
+            drink_img.style.backgroundSize = 'cover';
 
-                const drink_body = document.createElement('div');
-                drink_body.classList.add('d-flex', 'flex-row', 'col-12', 'h-25');
+            const drink_body = document.createElement('div');
+            drink_body.classList.add('d-flex', 'flex-column', 'col-12', 'card-body');
 
-                    const drink_body_p = document.createElement('p');
-                    drink_body_p.classList.add('ps-2', 'col-10');
-                    drink_body_p.innerHTML = info.nombre;
+                const drink_body_p = document.createElement('p');
+                drink_body_p.classList.add('ps-2', 'col-12', 'card-body-title');
+                drink_body_p.innerHTML = info.nombre;
 
-                    const drink_body_span = document.createElement('span');
-                    drink_body_span.classList.add('price', 'd-flex', 'w-100', 'justify-content-end', 'pe-2', 'pt-2');
-                    drink_body_span.innerHTML = `${info.precio}€`;
+                const drink_body_span = document.createElement('span');
+                drink_body_span.classList.add('price', 'd-flex', 'w-100', 'ps-2', 'card-body-price');
+                drink_body_span.innerHTML = info.precio.toFixed(2) + " €";
 
-                drink_body.appendChild(drink_body_p);
-                drink_body.appendChild(drink_body_span);
+            drink_body.appendChild(drink_body_p);
+            drink_body.appendChild(drink_body_span);
 
             drink.appendChild(drink_img);
             drink.appendChild(drink_body);
