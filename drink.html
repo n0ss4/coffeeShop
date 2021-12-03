@@ -29,13 +29,15 @@
                 </path>
                 <path
                     d="M20 5H4a2 2 0 0 0-2 2v13a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a2 2 0 0 0-2-2zm0 15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7h16z">
+                    <span class="badge" id="contadorProductos1"></span>
+
                 </path>
             </svg>
         </a>
     </nav>
 
     <section class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
-        aria-labelledby="offcanvasExampleLabel">
+             aria-labelledby="offcanvasExampleLabel">
         <ul class="offcanvas-body nav h-100 nav-pills flex-column mb-auto">
             <li class="nav-item">
                 <a href="index.html" class="nav-link link-dark" aria-current="page">
@@ -44,7 +46,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link active">
+                <a href="order.html" class="nav-link active">
                     <i class="fa-solid fa-bag-shopping fa-lg"></i>
                     <span class="ps-2">Order</span>
                 </a>
@@ -80,20 +82,14 @@
     <div class="position-fixed shopping">
         <div class="shopping-cart me-md-4 me-0">
             <div class="shopping-cart-header">
-                <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">1</span>
+                <i class="fa fa-shopping-cart cart-icon"></i><span class="badge" id="contadorProductos">0</span>
                 <div class="shopping-cart-total">
                     <span class="lighter-text">Total:</span>
                     <span class="main-color-text" id="total"></span>
                 </div>
             </div>
 
-            <ul class="shopping-cart-items">
-                <li class="clearfix">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg" alt="item1" />
-                    <span class="item-name">Sony DSC-RX100M III</span>
-                    <span class="item-price">$849.99</span>
-                    <span class="item-quantity">Quantity: 01</span>
-                </li>
+            <ul class="shopping-cart-items" id="carrito">
             </ul>
 
             <a href="./payConfirm.html" class="button">Checkout</a>

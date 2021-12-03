@@ -49,8 +49,17 @@ window.onload = function () {
                 sandwich_body.appendChild(sandwich_body_left);
                 sandwich_body.appendChild(sandwich_body_right);
 
+                const butom= document.createElement('button');
+                butom.classList.add('btn','btn-primary');
+                butom.setAttribute('type','button');
+                butom.setAttribute('data-bs-toggle','modal');
+                butom.setAttribute('data-bs-target','#exampleModal');
+                butom.setAttribute('marcador', info.id);
+                butom.addEventListener('click', afegirDadesModal);
+
             sandwich.appendChild(sandwich_img);
             sandwich.appendChild(sandwich_body);
+            sandwich.appendChild(butom);
 
             DOMitems.appendChild(sandwich);
             }
@@ -58,3 +67,4 @@ window.onload = function () {
     }
     renderizarProductos();
 }
+
