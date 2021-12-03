@@ -9,7 +9,7 @@ window.onload = function () {
             sandwich.setAttribute('href', '#!');
             sandwich.classList.add('card', 'card-top', 'col-xxl-3', 'col-xl-4', 'col-lg-6', 'col-md-6', 'col-12', 'd-flex', 'flex-column', 'mb-2');
             sandwich.setAttribute('marcador', info.id);
-            sandwich.addEventListener('click', anyadirProductoAlCarrito);
+            //sandwich.addEventListener('click', anyadirProductoAlCarrito);
 
                 const sandwich_img = document.createElement('div');
                 sandwich_img.classList.add('col-md-12', 'h-75');
@@ -27,8 +27,17 @@ window.onload = function () {
                     sandwich_body_span.classList.add('price', 'd-flex', 'w-100', 'justify-content-end', 'pe-2', 'pt-2');
                     sandwich_body_span.innerHTML = `${info.precio}€`;
 
+                    const butom= document.createElement('buton');
+                    butom.classList.add('btn','btn-primary');
+                    butom.setAttribute('type','button');
+                    butom.setAttribute('data-bs-toggle','modal');
+                    butom.setAttribute('data-bs-target','#exampleModal');
+                    butom.setAttribute('marcador', info.id);
+                    butom.addEventListener('click', afegirDadesModal);
+
                 sandwich_body.appendChild(sandwich_body_p);
                 sandwich_body.appendChild(sandwich_body_span);
+                sandwich.appendChild(butom);
 
             sandwich.appendChild(sandwich_img);
             sandwich.appendChild(sandwich_body);
@@ -39,3 +48,4 @@ window.onload = function () {
     }
     renderizarProductos();
 }
+

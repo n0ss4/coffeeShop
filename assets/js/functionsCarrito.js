@@ -8,14 +8,28 @@
 
     function anyadirProductoAlCarrito(evento) {
 
-        if(evento.target.parentElement.getAttribute('marcador') != undefined){
-            carrito.push(evento.target.parentElement.getAttribute('marcador'));
+        if(evento.target.getAttribute('marcador')){
+            carrito.push(evento.target.getAttribute('marcador'));
+            //evento.target.parentElement.getAttribute('marcador')
             calcularTotal();
             renderizarCarrito();
             guardarCarritoEnLocalStorage();
+            //document.getElementById("exampleModal").classList.remove("show");
+            $("#exampleModal").click(function(){
+                $("#exampleModal").modal('hide');
+            });
         }else{
             console.log({evento_target: evento.target});
         }
+
+    }
+
+    function afegirDadesModal(evento){
+        const object= baseDeDatos.find(x => x.id == evento.target.getAttribute('marcador'));
+        document.getElementById("exampleModalLabel").innerHTML= object.nombre;
+        document.getElementById("ingredients").innerHTML="Ingredients: "+object.ingredients;
+        document.getElementById("addToCard").setAttribute('marcador', object.id);
+        document.getElementById("addToCard").addEventListener('click', anyadirProductoAlCarrito);
     }
 
     function renderizarCarrito() {
