@@ -5,30 +5,23 @@ const DOMtotal = document.querySelector('#total');
 const DOMbotonVaciar = document.querySelector('#boton-vaciar');
 const miLocalStorage = window.localStorage;
 
-    var carrito = [];
-    var total = 0;
-    const DOMcarrito = document.querySelector('#carrito');
-    const DOMtotal = document.querySelector('#total');
-    //const DOMbotonVaciar = document.querySelector('#boton-vaciar');
-    const miLocalStorage = window.localStorage;
+function anyadirProductoAlCarrito(evento) {
 
-    function anyadirProductoAlCarrito(evento) {
-
-        if(evento.target.getAttribute('marcador')){
-            carrito.push(evento.target.getAttribute('marcador'));
-            //evento.target.parentElement.getAttribute('marcador')
-            calcularTotal();
-            renderizarCarrito();
-            guardarCarritoEnLocalStorage();
-            //document.getElementById("exampleModal").classList.remove("show");
-            $("#exampleModal").click(function(){
-                $("#exampleModal").modal('hide');
-            });
-        }else{
-            console.log({evento_target: evento.target});
-        }
-
+    if(evento.target.getAttribute('marcador')){
+        carrito.push(evento.target.getAttribute('marcador'));
+        //evento.target.parentElement.getAttribute('marcador')
+        calcularTotal();
+        renderizarCarrito();
+        guardarCarritoEnLocalStorage();
+        //document.getElementById("exampleModal").classList.remove("show");
+        $("#exampleModal").click(function(){
+            $("#exampleModal").modal('hide');
+        });
+    }else{
+        console.log({evento_target: evento.target});
     }
+
+}
 
     function afegirDadesModal(evento){
         const object= baseDeDatos.find(x => x.id == evento.target.getAttribute('marcador'));
@@ -100,30 +93,6 @@ const miLocalStorage = window.localStorage;
             },1000);
 
     }
-
-function renderizarCarrito() {
-    DOMcarrito.textContent = '';
-    const carritoSinDuplicados = [...new Set(carrito)];
-    carritoSinDuplicados.forEach((item) => {
-        const miItem = baseDeDatos.filter((itemBaseDatos) => {
-            return itemBaseDatos.id === parseInt(item);
-        });
-        const numeroUnidadesItem = carrito.reduce((total, itemId) => {
-            return itemId === item ? total += 1 : total;
-        }, 0);
-        /*const miNodo = document.createElement('li');
-        miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
-        miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}€`;
-        const miBoton = document.createElement('button');
-        miBoton.classList.add('btn', 'btn-danger', 'mx-5');
-        miBoton.textContent = 'X';
-        miBoton.style.marginLeft = '1rem';
-        miBoton.dataset.item = item;
-        miBoton.addEventListener('click', borrarItemCarrito);
-        miNodo.appendChild(miBoton);
-        DOMcarrito.appendChild(miNodo);*/
-    });
-}
 
 function borrarItemCarrito(evento) {
     const id = evento.target.dataset.item;
