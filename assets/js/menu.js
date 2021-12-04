@@ -1,35 +1,26 @@
 function recopilarMenu(){
 
-    if(document.getElementById('flexRadioPrimer1').checked) {
-        carrito.push("100");
+    const firstMarcador = $('input[name="first"]:checked').offsetParent()[0].getAttribute('marcador');
+    const secondMarcador = $('input[name="second"]:checked').offsetParent()[0].getAttribute('marcador');
+    const dessertMarcador = $('input[name="dessert"]:checked').offsetParent()[0].getAttribute('marcador');
+    const drinkMarcador = $('input[name="drink"]:checked').offsetParent()[0].getAttribute('marcador');
+
+    if(firstMarcador !== null){
+        carrito.push(firstMarcador);
     }
-    if(document.getElementById('flexRadioPrimer2').checked){
-        carrito.push("101");
+
+    if(secondMarcador !== null){
+        carrito.push(secondMarcador);
     }
-    if(document.getElementById('flexRadioPrimer3').checked){
-        carrito.push("102");
+
+    if(dessertMarcador !== null){
+        carrito.push(dessertMarcador);
     }
-    if(document.getElementById('flexRadioSegon1').checked){
-        carrito.push("103");
+
+    if(drinkMarcador !== null){
+        carrito.push(drinkMarcador);
     }
-    if(document.getElementById('flexRadioSegon2').checked){
-        carrito.push("104");
-    }
-    if(document.getElementById('flexRadioSegon3').checked){
-        carrito.push("105");
-    }
-    if(document.getElementById('flexRadioPostre1').checked){
-        carrito.push("106");
-    }
-    if(document.getElementById('flexRadioPostre2').checked){
-        carrito.push("107");
-    }
-    if(document.getElementById('flexRadioPostre3').checked){
-        carrito.push("108");
-    }
-    if(document.getElementById('flexRadioBeguda1').checked){
-        carrito.push("109");
-    }
+    
     guardarCarritoEnLocalStorage();
 
 }
@@ -39,6 +30,7 @@ function buildMenu(item, dom, name) {
     const card = document.createElement('a');
             card.classList.add('card', 'card-top', 'col-xxl-3', 'col-xl-4', 'col-lg-6', 'col-md-6', 'col-12', 'd-flex', 'flex-column', 'mb-2');
             card.setAttribute('href', '#');
+            card.setAttribute('marcador', item.id);
 
                 const cardImg = document.createElement('div');
                 cardImg.classList.add('card-img', 'col-md-12');
