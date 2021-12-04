@@ -1,37 +1,39 @@
 function recopilarMenu(){
 
-    if(document.getElementById('flexRadioPrimer1').checked) {
+    if(document.getElementById('first100').checked) {
         carrito.push("100");
+        console.log("EI")
     }
-    if(document.getElementById('flexRadioPrimer2').checked){
+    if(document.getElementById('first101').checked){
         carrito.push("101");
     }
-    if(document.getElementById('flexRadioPrimer3').checked){
+    if(document.getElementById('first102').checked){
         carrito.push("102");
     }
-    if(document.getElementById('flexRadioSegon1').checked){
+    if(document.getElementById('second103').checked){
         carrito.push("103");
     }
-    if(document.getElementById('flexRadioSegon2').checked){
+    if(document.getElementById('second104').checked){
         carrito.push("104");
     }
-    if(document.getElementById('flexRadioSegon3').checked){
+    if(document.getElementById('second105').checked){
         carrito.push("105");
     }
-    if(document.getElementById('flexRadioPostre1').checked){
+    if(document.getElementById('dessert106').checked){
         carrito.push("106");
     }
-    if(document.getElementById('flexRadioPostre2').checked){
+    if(document.getElementById('dessert107').checked){
         carrito.push("107");
     }
-    if(document.getElementById('flexRadioPostre3').checked){
+    if(document.getElementById('dessert108').checked){
         carrito.push("108");
     }
-    if(document.getElementById('flexRadioBeguda1').checked){
+    if(document.getElementById('drink109').checked){
         carrito.push("109");
     }
+    calcularTotal();
+    renderizarCarrito();
     guardarCarritoEnLocalStorage();
-
 }
 
 
@@ -122,14 +124,4 @@ window.onload = function () {
 
 }
 
-function guardarCarritoEnLocalStorage () {
-    miLocalStorage.setItem('carrito', JSON.stringify(carrito));
-}
 
-function cargarCarritoDeLocalStorage () {
-    if (miLocalStorage.getItem('carrito') !== null) {
-        carrito = JSON.parse(miLocalStorage.getItem('carrito'));
-    }
-}
-
-cargarCarritoDeLocalStorage();
