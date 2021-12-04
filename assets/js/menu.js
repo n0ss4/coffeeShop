@@ -1,27 +1,34 @@
 function recopilarMenu(){
 
-    const firstMarcador = $('input[name="first"]:checked').offsetParent()[0].getAttribute('marcador');
-    const secondMarcador = $('input[name="second"]:checked').offsetParent()[0].getAttribute('marcador');
-    const dessertMarcador = $('input[name="dessert"]:checked').offsetParent()[0].getAttribute('marcador');
-    const drinkMarcador = $('input[name="drink"]:checked').offsetParent()[0].getAttribute('marcador');
+    const firstMarcador = $('input[name="first"]:checked').offsetParent()[0] !== undefined ? $('input[name="first"]:checked').offsetParent()[0].getAttribute('marcador') : null;
+    const secondMarcador = $('input[name="second"]:checked').offsetParent()[0] !== undefined ? $('input[name="second"]:checked').offsetParent()[0].getAttribute('marcador') : null;
+    const dessertMarcador = $('input[name="dessert"]:checked').offsetParent()[0] !== undefined ? $('input[name="dessert"]:checked').offsetParent()[0].getAttribute('marcador') : null;
+    const drinkMarcador = $('input[name="drink"]:checked').offsetParent()[0] !== undefined ? $('input[name="drink"]:checked').offsetParent()[0].getAttribute('marcador') : null;
 
-    if(firstMarcador !== null){
-        carrito.push(firstMarcador);
+    if(firstMarcador == null || secondMarcador == null || dessertMarcador == null || drinkMarcador == null){
+        
+        Swal.fire({
+            title: 'Error',
+            text: 'Debe seleccionar una opción',
+            icon: 'error',
+        });
+
+        return false;
+    }else{
+        carrito.push("111");
+
+        calcularTotal();
+        renderizarCarrito();
+        guardarCarritoEnLocalStorage();
+
+        Swal.fire(
+            'Menú agregado',
+            'Se ha añadido el menú al carrito',
+            'success'
+          )
     }
 
-    if(secondMarcador !== null){
-        carrito.push(secondMarcador);
-    }
-
-    if(dessertMarcador !== null){
-        carrito.push(dessertMarcador);
-    }
-
-    if(drinkMarcador !== null){
-        carrito.push(drinkMarcador);
-    }
-    
-    guardarCarritoEnLocalStorage();
+    return true;
 
 }
 
@@ -41,18 +48,13 @@ function buildMenu(item, dom, name) {
                 cardBody.classList.add('card-body', 'd-flex', 'flex-row', 'col-12');
 
                     const cardBodyOne = document.createElement('div');
-                    cardBodyOne.classList.add('d-flex', 'flex-column', 'col-8');
+                    cardBodyOne.classList.add('d-flex', 'flex-column', 'col-8', 'align-self-center');
 
                         const cardBodyTitle = document.createElement('p');
                         cardBodyTitle.classList.add('card-body-title', 'ps-2', 'col-12');
                         cardBodyTitle.innerHTML = item.nombre;
 
-                        const cardBodyPrice = document.createElement('span');
-                        cardBodyPrice.classList.add('card-body-price', 'col-12', 'd-flex', 'w-100', 'ps-2');
-                        cardBodyPrice.innerHTML = item.precio.toFixed(2) + ' €';
-
                     cardBodyOne.appendChild(cardBodyTitle);
-                    cardBodyOne.appendChild(cardBodyPrice);
 
                     const cardBodyTwo = document.createElement('div');
                     cardBodyTwo.classList.add('d-flex', 'flex-row', 'justify-content-end', 'col-4');

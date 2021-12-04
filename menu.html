@@ -85,38 +85,39 @@
 
   <div class="position-fixed shopping">
     <div class="shopping-cart me-md-4 me-0">
-        <div class="shopping-cart-header">
-            <i class="fa fa-shopping-cart cart-icon"></i><span class="badge" id="contadorProductos">0</span>
-            <div class="shopping-cart-total">
-                <span class="lighter-text">Total:</span>
-                <span class="main-color-text" id="total"></span>
-            </div>
+      <div class="shopping-cart-header">
+        <i class="fa fa-shopping-cart cart-icon"></i><span class="badge" id="contadorProductos">0</span>
+        <div class="shopping-cart-total">
+          <span class="lighter-text">Total:</span>
+          <span class="main-color-text" id="total"></span>
         </div>
+      </div>
 
-        <ul class="shopping-cart-items" id="carrito">
-        </ul>
+      <ul class="shopping-cart-items" id="carrito">
+      </ul>
 
-        <a href="./payConfirm.html" class="button">Checkout</a>
+      <a href="./payConfirm.html" class="button">Checkout</a>
     </div>
-</div>
+  </div>
 
   <main class="d-md-flex flex-md-column">
     <section class="col-12 d-flex title-free align-items-center p-32">
-      <h1>Menú</h1>
+      <div class="col-md-10 col-8">
+        <h1>Menú</h1>
+      </div>
+      <button type="submit" onclick="recopilarMenu()" class="pay btn btn-dark w-100">Pay</button>
     </section>
 
     <form class="col-12 d-flex flex-column">
 
-      <h2 class="p-32 mt-4">First</h2>
-      <div id="first" class="d-flex flex-wrap col-12 p-32" role="group" aria-label="First group"></div>
-      <h2 class="p-32 mt-4">Second</h2>
-      <div id="second" class="d-flex flex-wrap col-12 p-32" role="group" aria-label="Second group"></div>
-      <h2 class="p-32 mt-4">Desserts</h2>
-      <div id="dessert" class="d-flex flex-wrap col-12 p-32" role="group" aria-label="Desserts group"></div>
-      <h2 class="p-32 mt-4">Drinks</h2>
-      <div id="drink" class="d-flex flex-wrap col-12 p-32" role="group" aria-label="Drinks group"></div>
-
-      <button type="submit" onclick="recopilarMenu()" class="btn btn-primary w-100">Pagar</button>
+        <h2 class="p-32 mt-4">First</h2>
+        <div id="first" class="d-flex flex-wrap col-12 p-32" role="group" aria-label="First group"></div>
+        <h2 class="p-32 mt-4">Second</h2>
+        <div id="second" class="d-flex flex-wrap col-12 p-32" role="group" aria-label="Second group"></div>
+        <h2 class="p-32 mt-4">Desserts</h2>
+        <div id="dessert" class="d-flex flex-wrap col-12 p-32" role="group" aria-label="Desserts group"></div>
+        <h2 class="p-32 mt-4">Drinks</h2>
+        <div id="drink" class="d-flex flex-wrap col-12 p-32" role="group" aria-label="Drinks group"></div>
 
     </form>
 
@@ -161,6 +162,7 @@
   <script type="text/javascript" src="assets/js/functionsCarrito.js"></script>
   <script type="text/javascript" src="assets/js/menu.js"></script>
   <script type="text/javascript" src="./assets/js/cart-shop.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 
