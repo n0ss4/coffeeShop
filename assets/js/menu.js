@@ -1,6 +1,3 @@
-var carrito = [];
-const miLocalStorage = window.localStorage;
-
 function recopilarMenu(){
 
     if(document.getElementById('flexRadioPrimer1').checked) {
@@ -37,21 +34,91 @@ function recopilarMenu(){
 
 }
 
+
+function buildMenu(item, dom, name) {
+    const card = document.createElement('a');
+            card.classList.add('card', 'card-top', 'col-xxl-3', 'col-xl-4', 'col-lg-6', 'col-md-6', 'col-12', 'd-flex', 'flex-column', 'mb-2');
+            card.setAttribute('href', '#');
+
+                const cardImg = document.createElement('div');
+                cardImg.classList.add('card-img', 'col-md-12');
+                cardImg.style.backgroundImage = `url(.${item.imagen})`;
+                cardImg.style.backgroundSize = 'cover';
+
+                const cardBody = document.createElement('div');
+                cardBody.classList.add('card-body', 'd-flex', 'flex-row', 'col-12');
+
+                    const cardBodyOne = document.createElement('div');
+                    cardBodyOne.classList.add('d-flex', 'flex-column', 'col-8');
+
+                        const cardBodyTitle = document.createElement('p');
+                        cardBodyTitle.classList.add('card-body-title', 'ps-2', 'col-12');
+                        cardBodyTitle.innerHTML = item.nombre;
+
+                        const cardBodyPrice = document.createElement('span');
+                        cardBodyPrice.classList.add('card-body-price', 'col-12', 'd-flex', 'w-100', 'ps-2');
+                        cardBodyPrice.innerHTML = item.precio.toFixed(2) + ' €';
+
+                    cardBodyOne.appendChild(cardBodyTitle);
+                    cardBodyOne.appendChild(cardBodyPrice);
+
+                    const cardBodyTwo = document.createElement('div');
+                    cardBodyTwo.classList.add('d-flex', 'flex-row', 'justify-content-end', 'col-4');
+
+                    const btnCheck = document.createElement('input');
+                    btnCheck.setAttribute('type', 'radio');
+                    btnCheck.classList.add('btn-check');
+                    btnCheck.setAttribute('name', name);
+                    btnCheck.setAttribute('id', name + item.id);
+                    btnCheck.setAttribute('autocomplete', 'off');
+
+                    const btnLabel = document.createElement('label');
+                    btnLabel.setAttribute('class', 'btn btn-outline-success');
+                    btnLabel.classList.add('add', 'me-2', 'd-flex', 'justify-content-center', 'align-items-center');
+                    btnLabel.setAttribute('for', name + item.id);
+                    btnLabel.innerHTML = '<i class="fa-solid fa-check"></i>';
+
+                    cardBodyTwo.appendChild(btnCheck);
+                    cardBodyTwo.appendChild(btnLabel);
+
+                cardBody.appendChild(cardBodyOne);
+                cardBody.appendChild(cardBodyTwo);
+
+            card.appendChild(cardImg);
+            card.appendChild(cardBody);
+
+        dom.appendChild(card);
+}
+
 window.onload = function () {
 
-    document.getElementById("flexRadioPrimer1id").innerHTML = baseDeDatos.find(o => o.id == "100").nombre;
-    document.getElementById("flexRadioPrimer2id").innerHTML = baseDeDatos.find(o => o.id == "101").nombre;
-    document.getElementById("flexRadioPrimer3id").innerHTML = baseDeDatos.find(o => o.id == "102").nombre;
+    const DOMfirst = document.getElementById('first');
 
-    document.getElementById("flexRadioSegon1id").innerHTML = baseDeDatos.find(o => o.id == "103").nombre;
-    document.getElementById("flexRadioSegon2id").innerHTML = baseDeDatos.find(o => o.id == "104").nombre;
-    document.getElementById("flexRadioSegon3id").innerHTML = baseDeDatos.find(o => o.id == "105").nombre;
+    const first = baseDeDatos.filter(item => (item.categoria === 'menu') && (item.sub_categoria === 'first'));
+    first.forEach(item => {
+            buildMenu(item, DOMfirst, 'first');
+    });
 
-    document.getElementById("flexRadioPostre1id").innerHTML = baseDeDatos.find(o => o.id == "106").nombre;
-    document.getElementById("flexRadioPostre2id").innerHTML = baseDeDatos.find(o => o.id == "107").nombre;
-    document.getElementById("flexRadioPostre3id").innerHTML = baseDeDatos.find(o => o.id == "108").nombre;
+    const DOMsecond = document.getElementById('second');
 
-    document.getElementById("flexRadioBegudaid").innerHTML = baseDeDatos.find(o => o.id == "109").nombre;
+    const second = baseDeDatos.filter(item => (item.categoria === 'menu') && (item.sub_categoria === 'second'));
+    second.forEach(item => {
+            buildMenu(item, DOMsecond, 'second');
+    });
+
+    const DOMdessert = document.getElementById('dessert');
+
+    const dessert = baseDeDatos.filter(item => (item.categoria === 'menu') && (item.sub_categoria === 'dessert'));
+    dessert.forEach(item => {
+            buildMenu(item, DOMdessert, 'dessert');
+    });
+
+    const DOMdrink = document.getElementById('drink');
+
+    const drink = baseDeDatos.filter(item => (item.categoria === 'menu') && (item.sub_categoria === 'drink'));
+    drink.forEach(item => {
+            buildMenu(item, DOMdrink, 'drink');
+    });
 
 }
 

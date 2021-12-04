@@ -345,6 +345,7 @@ const baseDeDatos = [
         precio: 2,
         imagen: '/assets/img/sandwich/sandwich.png',
         categoria: 'menu',
+        sub_categoria: 'first',
         vegeteria: 0,
         celiac: 0,
         ingredients: 'pasta/enciam/tonyina/olives'
@@ -355,6 +356,7 @@ const baseDeDatos = [
         precio: 2,
         imagen: '/assets/img/sandwich/sandwich.png',
         categoria: 'menu',
+        sub_categoria: 'first',
         vegeteria: 0,
         celiac: 0,
         ingredients: 'pasta/tomaquet/carn picada'
@@ -365,6 +367,7 @@ const baseDeDatos = [
         precio: 2,
         imagen: '/assets/img/sandwich/sandwich.png',
         categoria: 'menu',
+        sub_categoria: 'first',
         vegeteria: 1,
         celiac: 1,
         ingredients: 'enciam/olives/tomaquet'
@@ -375,6 +378,7 @@ const baseDeDatos = [
         precio: 2,
         imagen: '/assets/img/sandwich/sandwich.png',
         categoria: 'menu',
+        sub_categoria: 'second',
         vegeteria: 0,
         celiac: 1,
         ingredients: 'llom/patates'
@@ -385,6 +389,7 @@ const baseDeDatos = [
         precio: 2,
         imagen: '/assets/img/sandwich/sandwich.png',
         categoria: 'menu',
+        sub_categoria: 'second',
         vegeteria: 0,
         celiac: 1,
         ingredients: 'porc/patates'
@@ -395,6 +400,7 @@ const baseDeDatos = [
         precio: 2,
         imagen: '/assets/img/sandwich/sandwich.png',
         categoria: 'menu',
+        sub_categoria: 'second',
         vegeteria: 1,
         celiac: 1,
         ingredients: 'patates/pastanaga/coliflor'
@@ -405,6 +411,7 @@ const baseDeDatos = [
         precio: 2,
         imagen: '/assets/img/sandwich/sandwich.png',
         categoria: 'menu',
+        sub_categoria: 'dessert',
         vegeteria: null,
         celiac: null,
         ingredients: null
@@ -415,6 +422,7 @@ const baseDeDatos = [
         precio: 2,
         imagen: '/assets/img/sandwich/sandwich.png',
         categoria: 'menu',
+        sub_categoria: 'dessert',
         vegeteria: null,
         celiac: null,
         ingredients:null
@@ -425,6 +433,7 @@ const baseDeDatos = [
         precio: 2,
         imagen: '/assets/img/sandwich/sandwich.png',
         categoria: 'menu',
+        sub_categoria: 'dessert',
         vegeteria: null,
         celiac: null,
         ingredients:null
@@ -436,6 +445,7 @@ const baseDeDatos = [
         precio: 0.10,
         imagen: '/assets/img/sandwich/sandwich.png',
         categoria: 'menu',
+        sub_categoria: 'drink',
         vegeteria: null,
         celiac: null,
         ingredients:null

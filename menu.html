@@ -35,6 +35,7 @@
         <path
           d="M20 5H4a2 2 0 0 0-2 2v13a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a2 2 0 0 0-2-2zm0 15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7h16z">
         </path>
+        <span class="badge" id="contadorProductos1"></span>
       </svg>
     </a>
   </nav>
@@ -84,89 +85,36 @@
 
   <div class="position-fixed shopping">
     <div class="shopping-cart me-md-4 me-0">
-      <div class="shopping-cart-header">
-        <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">1</span>
-        <div class="shopping-cart-total">
-          <span class="lighter-text">Total:</span>
-          <span class="main-color-text" id="total"></span>
+        <div class="shopping-cart-header">
+            <i class="fa fa-shopping-cart cart-icon"></i><span class="badge" id="contadorProductos">0</span>
+            <div class="shopping-cart-total">
+                <span class="lighter-text">Total:</span>
+                <span class="main-color-text" id="total"></span>
+            </div>
         </div>
-      </div>
 
-      <ul class="shopping-cart-items">
-        <li class="clearfix">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg" alt="item1" />
-          <span class="item-name">Sony DSC-RX100M III</span>
-          <span class="item-price">$849.99</span>
-          <span class="item-quantity">Quantity: 01</span>
-        </li>
-      </ul>
+        <ul class="shopping-cart-items" id="carrito">
+        </ul>
 
-      <a href="./payConfirm.html" class="button">Checkout</a>
+        <a href="./payConfirm.html" class="button">Checkout</a>
     </div>
-  </div>
+</div>
 
   <main class="d-md-flex flex-md-column">
     <section class="col-12 d-flex title-free align-items-center p-32">
       <h1>Menú</h1>
     </section>
 
-    <form class="col-12" action="confirmMenu.html">
+    <form class="col-12 d-flex flex-column" method="GET">
 
-      <div class="col-12 btn-group p-32" role="group" aria-label="First group">
-        <a class="card card-top col-xl-2 col-lg-3 col-md-4 col-12 d-flex flex-column" href="#">
-          <div class="card-img col-md-12"></div>
-          <div class="card-body d-flex flex-row col-12">
-            <div class="d-flex flex-column col-8">
-              <p class="card-body-title ps-2 col-12">Estrella Damm</p>
-              <span class="card-body-price col-12 d-flex w-100 ps-2">1 $</span>
-            </div>
-            <div class="d-flex flex-row justify-content-end col-4">
-              <button class="h-75 w-50 btn btn-outline-dark me-2 d-flex justify-content-center align-items-center">
-                <i class="fa-solid fa-bag-shopping"></i>
-              </button>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-12 btn-group p-32" role="group" aria-label="Second group">
-        <a class="btn btn-success card card-top col-xl-2 col-lg-3 col-md-4 col-12 d-flex flex-column" href="#"
-          role="button">
-          <div class="product-damm col-md-12 h-75"></div>
-          <div class="d-flex flex-row col-12 h-25">
-            <p class="ps-2 col-10">Estrella Damm</p>
-            <span class="price d-flex w-100 justify-content-end pe-2 pt-2">1 $</span>
-          </div>
-        </a>
-        <a class="btn btn-success card card-top col-xl-2 col-lg-3 col-md-4 col-12 d-flex flex-column" href="#"
-          role="button">
-          <div class="product-damm col-md-12 h-75"></div>
-          <div class="d-flex flex-row col-12 h-25">
-            <p class="ps-2 col-10">Estrella Damm</p>
-            <span class="price d-flex w-100 justify-content-end pe-2 pt-2">1 $</span>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-12 btn-group p-32" role="group" aria-label="Desserts group">
-        <a class="card card-top col-xl-2 col-lg-3 col-md-4 col-12 d-flex flex-column" href="#">
-          <div class="product-damm col-md-12 h-75"></div>
-          <div class="d-flex flex-row col-12 h-25">
-            <p class="ps-2 col-10">Estrella Damm</p>
-            <span class="price d-flex w-100 justify-content-end pe-2 pt-2">1 $</span>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-12 btn-group p-32" role="group" aria-label="Drinks group">
-        <a class="card card-top col-xl-2 col-lg-3 col-md-4 col-12 d-flex flex-column" href="#">
-          <div class="product-damm col-md-12 h-75"></div>
-          <div class="d-flex flex-row col-12 h-25">
-            <p class="ps-2 col-10">Estrella Damm</p>
-            <span class="price d-flex w-100 justify-content-end pe-2 pt-2">1 $</span>
-          </div>
-        </a>
-      </div>
+      <h2 class="p-32 mt-4">First</h2>
+      <div id="first" class="d-flex flex-wrap col-12 p-32" role="group" aria-label="First group"></div>
+      <h2 class="p-32 mt-4">Second</h2>
+      <div id="second" class="d-flex flex-wrap col-12 p-32" role="group" aria-label="Second group"></div>
+      <h2 class="p-32 mt-4">Desserts</h2>
+      <div id="dessert" class="d-flex flex-wrap col-12 p-32" role="group" aria-label="Desserts group"></div>
+      <h2 class="p-32 mt-4">Drinks</h2>
+      <div id="drink" class="d-flex flex-wrap col-12 p-32" role="group" aria-label="Drinks group"></div>
 
       <button type="submit" onclick="recopilarMenu()" class="btn btn-primary w-100">Pagar</button>
 
@@ -209,7 +157,6 @@
   <script type="text/javascript" src="./assets/jquery/js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="./assets/popper/popper.min.js"></script>
   <script type="text/javascript" src="./assets/bootstrap/js/bootstrap.min.js"></script>
-  </script>
   <script type="text/javascript" src="assets/js/database.js"></script>
   <script type="text/javascript" src="assets/js/functionsCarrito.js"></script>
   <script type="text/javascript" src="assets/js/menu.js"></script>

@@ -30,12 +30,19 @@ a, a:hover{
 
 .card-body-title{
     margin-bottom: 0;
+    white-space: nowrap;
 }
+
+
 
 @media (min-width: 1400px){
     .p-32{
         padding-left: 32px;
         padding-right: 32px;
+    }
+
+    h2{
+        margin-left: .5rem;
     }
 
     .title-free{
@@ -45,7 +52,6 @@ a, a:hover{
 }
 
 @media (max-width: 1400px){
-
     body{
         padding: 3.5rem 2rem 0 2rem;
     }
@@ -71,6 +77,19 @@ a, a:hover{
         margin-left: .5rem;
         margin-bottom: .5rem;
     }
+
+    .add{
+        margin-top: 1vh;
+        height: 70%;
+        width: 30%;
+    }
+}
+
+@media (max-width: 1200px){
+    .add{
+        height: 75%;
+        width: 50%;
+    }
 }
 
 @media (min-width: 1401px){
@@ -78,5 +97,11 @@ a, a:hover{
         width: 24.3%;
         margin-left: .5rem;
         margin-bottom: .5rem;
+    }
+
+    .add{
+        margin-top: 2vh;
+        height: 55%;
+        width: 35%;
     }
 }
