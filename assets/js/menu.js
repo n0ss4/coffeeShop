@@ -1,39 +1,28 @@
 function recopilarMenu(){
 
-    if(document.getElementById('first100').checked) {
-        carrito.push("100");
-        console.log("EI")
+    const firstMarcador = $('input[name="first"]:checked').offsetParent()[0].getAttribute('marcador');
+    const secondMarcador = $('input[name="second"]:checked').offsetParent()[0].getAttribute('marcador');
+    const dessertMarcador = $('input[name="dessert"]:checked').offsetParent()[0].getAttribute('marcador');
+    const drinkMarcador = $('input[name="drink"]:checked').offsetParent()[0].getAttribute('marcador');
+
+    if(firstMarcador !== null){
+        carrito.push(firstMarcador);
     }
-    if(document.getElementById('first101').checked){
-        carrito.push("101");
+
+    if(secondMarcador !== null){
+        carrito.push(secondMarcador);
     }
-    if(document.getElementById('first102').checked){
-        carrito.push("102");
+
+    if(dessertMarcador !== null){
+        carrito.push(dessertMarcador);
     }
-    if(document.getElementById('second103').checked){
-        carrito.push("103");
+
+    if(drinkMarcador !== null){
+        carrito.push(drinkMarcador);
     }
-    if(document.getElementById('second104').checked){
-        carrito.push("104");
-    }
-    if(document.getElementById('second105').checked){
-        carrito.push("105");
-    }
-    if(document.getElementById('dessert106').checked){
-        carrito.push("106");
-    }
-    if(document.getElementById('dessert107').checked){
-        carrito.push("107");
-    }
-    if(document.getElementById('dessert108').checked){
-        carrito.push("108");
-    }
-    if(document.getElementById('drink109').checked){
-        carrito.push("109");
-    }
-    calcularTotal();
-    renderizarCarrito();
+    
     guardarCarritoEnLocalStorage();
+
 }
 
 
@@ -41,6 +30,7 @@ function buildMenu(item, dom, name) {
     const card = document.createElement('a');
             card.classList.add('card', 'card-top', 'col-xxl-3', 'col-xl-4', 'col-lg-6', 'col-md-6', 'col-12', 'd-flex', 'flex-column', 'mb-2');
             card.setAttribute('href', '#');
+            card.setAttribute('marcador', item.id);
 
                 const cardImg = document.createElement('div');
                 cardImg.classList.add('card-img', 'col-md-12');
@@ -124,4 +114,14 @@ window.onload = function () {
 
 }
 
+function guardarCarritoEnLocalStorage () {
+    miLocalStorage.setItem('carrito', JSON.stringify(carrito));
+}
 
+function cargarCarritoDeLocalStorage () {
+    if (miLocalStorage.getItem('carrito') !== null) {
+        carrito = JSON.parse(miLocalStorage.getItem('carrito'));
+    }
+}
+
+cargarCarritoDeLocalStorage();
