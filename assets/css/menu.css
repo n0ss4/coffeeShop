@@ -33,6 +33,10 @@ a, a:hover{
     white-space: nowrap;
 }
 
+.pay{
+    height: fit-content;
+}
+
 
 
 @media (min-width: 1400px){

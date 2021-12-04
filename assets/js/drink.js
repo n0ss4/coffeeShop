@@ -3,7 +3,7 @@ window.onload = function () {
 
     function renderizarProductos() {
         baseDeDatos.forEach((info) => {
-            if(info.categoria=='aigua' || info.categoria=='cervesa' || info.categoria=='beguda' || info.categoria=='suc'){
+            if(info.categoria=='aigua' || info.categoria=='cervesa' || info.categoria=='beguda' || info.categoria=='suc' || info.categoria == 'cafe'){
 
                 const drink = document.createElement('a');
                 drink.setAttribute('href', '#!');

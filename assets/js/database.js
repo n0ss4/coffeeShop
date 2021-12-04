@@ -461,6 +461,18 @@ const baseDeDatos = [
         celiac: false,
         ingredients: 'pollastre/tomaquet/enciam/maionesa'
     }
+    ,
+    {
+        id: 111,
+        nombre: 'Menú',
+        imagen: '/assets/img/sandwich/sandwich.png',
+        precio: 6,
+        categoria: 'menu',
+        sub_categoria: 'menu',
+        vegeteria: null,
+        celiac: null,
+        ingredients: null
+    }
 ];
 
 
