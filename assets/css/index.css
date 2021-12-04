@@ -1,5 +1,6 @@
 body{
     background-color: #FFEBCC;
+    height: 100vh;
 }
 
 form{
@@ -39,3 +40,4 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 footer a:hover, footer svg:hover{
     color: whitesmoke;
 }
+

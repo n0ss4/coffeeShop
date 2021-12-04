@@ -12,6 +12,35 @@ a, a:hover{
     color: black;
 }
 
+.card-top{
+    height: 25vh;
+    cursor: pointer;
+}
+
+.card-img{
+    height: 75%;
+    pointer-events: none;
+}
+
+.card-body{
+    height: 25%;
+    padding: 0;
+    pointer-events: none;
+}
+
+.card-body-button{
+    pointer-events: visible;
+}
+
+.card-body-icon{
+    pointer-events: none;
+}
+
+.card-body-title{
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+
 .product-damm{
     background-image: url("../img/order/estrella-damm.png");
     background-size: cover;
@@ -47,7 +76,7 @@ main{
     }
 
     .card-top{
-        height: 20vh;
+        height: 25vh;
     }
 
     body{

@@ -8,6 +8,8 @@ const miLocalStorage = window.localStorage;
 function addProductToCart(evento) {
 
     if (evento.target.getAttribute('marcador')) {
+        document.getElementById("contadorProductos1").innerHTML = '+1';
+
         carrito.push(evento.target.getAttribute('marcador'));
 
         calcularTotal();
@@ -89,8 +91,6 @@ function renderizarCarrito() {
 
         buildCart(miItem[0], numeroUnidadesItem);
     });
-
-    document.getElementById("contadorProductos1").innerHTML = '+1';
 
     setTimeout(function () {
         if (total > 99) {

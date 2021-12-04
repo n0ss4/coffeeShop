@@ -440,6 +440,17 @@ const baseDeDatos = [
         celiac: null,
         ingredients:null
     }
+    ,
+    {
+        id: 110,
+        nombre: 'Vegetal de Pollastre',
+        imagen: '/assets/img/sandwich/sandwich.png',
+        precio: 1.75,
+        categoria: 'biquini',
+        vegeteria: true,
+        celiac: false,
+        ingredients: 'pollastre/tomaquet/enciam/maionesa'
+    }
 ];
 
 

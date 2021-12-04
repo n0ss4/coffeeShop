@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Cafè Facultat de Ciències - Choose</title>
+  <link rel="shortcut icon" href="./assets/img/logo.ico" type="image/x-icon">
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" type="text/css">
@@ -23,7 +24,10 @@
       aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand me-auto ms-3 title" href="./index.html">Cafè Facultat de Ciències</a>
+    <a class="navbar-brand me-auto ms-3" href="./index.html">
+      <span class="title">Cafè Facultat de Ciències</span>
+      <img src="./assets/img/logo.png" alt="logo" class="logo" width="45" height="45">
+    </a>
     <a id="shop" class="navbar-brand ms-auto me-5 pt-1" href="#">
       <svg width="24px" height="24px" fill="#111" viewBox="0 0 24 24">
         <path d="M16 7a1 1 0 0 1-1-1V3H9v3a1 1 0 0 1-2 0V3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3a1 1 0 0 1-1 1z"></path>
@@ -36,7 +40,7 @@
   </nav>
 
   <section class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
-           aria-labelledby="offcanvasExampleLabel">
+    aria-labelledby="offcanvasExampleLabel">
     <ul class="offcanvas-body nav h-100 nav-pills flex-column mb-auto">
       <li class="nav-item">
         <a href="index.html" class="nav-link link-dark" aria-current="page">
@@ -83,7 +87,7 @@
       <div class="shopping-cart-header">
         <i class="fa fa-shopping-cart cart-icon"></i><span class="badge" id="contadorProductos">0</span>
         <div class="shopping-cart-total">
-          <span class="lighter-text" >Total:</span>
+          <span class="lighter-text">Total:</span>
           <span class="main-color-text" id="total"></span>
         </div>
       </div>
@@ -113,7 +117,8 @@
         </div>
         <img class="ms-auto col-md-4" src="assets/img/choose/drinks.png" alt="menu">
       </a>
-      <a class="card col-xl-2 col-lg-3 col-md-4 col-12 ms-md-2 mt-md-0 mt-2 dessert d-flex flex-row" href="deserts.html">
+      <a class="card col-xl-2 col-lg-3 col-md-4 col-12 ms-md-2 mt-md-0 mt-2 dessert d-flex flex-row"
+        href="deserts.html">
         <div class="d-flex col-md-8 align-items-center">
           <p class="p-2">Dessert</p>
         </div>
@@ -121,21 +126,36 @@
       </a>
     </section>
     <section class="pb-3 d-flex flex-row align-items-center mt-md-0 mt-4 p-32">
-      <i class="fa-solid fa-tag"></i></i><h5 class="ms-2 p-0 m-0">Top promotions</h5>
+      <i class="fa-solid fa-tag"></i></i>
+      <h5 class="ms-2 p-0 m-0">Top promotions</h5>
     </section>
     <section class="h-25 d-flex flex-wrap p-32">
-      <a class="card card-top col-xl-2 col-lg-3 col-md-4 col-12 d-flex flex-column" href="#">
-        <div class="product-damm col-md-12 h-75"></div>
-        <div class="d-flex flex-row col-12 h-25">
-          <p class="ps-2 col-10">Estrella Damm</p>
-          <span class="price d-flex w-100 justify-content-end pe-2 pt-2">1 $</span>
+      <a class="card card-top col-xl-2 col-lg-3 col-md-4 col-12 d-flex flex-column">
+        <div class="card-img product-damm col-md-12"></div>
+        <div class="card-body d-flex flex-row col-12">
+          <div class="d-flex flex-column col-8">
+            <p class="card-body-title ps-2 col-12">Estrella Damm</p>
+            <span class="card-body-price col-12 d-flex w-100 ps-2">1.00 €</span>
+          </div>
+          <div class="d-flex flex-row justify-content-end col-4">
+            <button class="card-body-button h-75 w-50 btn btn-outline-dark me-2 d-flex justify-content-center align-items-center" marcador="24">
+              <i class="card-body-icon fa-solid fa-bag-shopping"></i>
+            </button>
+          </div>
         </div>
       </a>
-      <a class="card card-top col-xl-2 col-md-4 col-12 ms-xl-2 mt-md-0 mt-2 d-flex flex-column" href="#">
-        <div class="product-trig col-md-12 h-75"></div>
-        <div class="d-flex col-12 h-25">
-          <p class="ps-2 col-10">Triangle de Xocolata</p>
-          <span class="price d-flex w-100 justify-content-end pe-2 pt-2">1 $</span>
+      <a class="card card-top col-xl-2 col-lg-3 ms-xl-2 mt-md-0 mt-2 col-md-4 col-12 d-flex flex-column">
+        <div class="card-img product-trig col-md-12"></div>
+        <div class="card-body d-flex flex-row col-12">
+          <div class="d-flex flex-column col-8">
+            <p class="card-body-title ps-2 col-12">Triangle de Xocolata</p>
+            <span class="card-body-price col-12 d-flex w-100 ps-2">1.00 €</span>
+          </div>
+          <div class="d-flex flex-row justify-content-end col-4">
+            <button class="card-body-button h-75 w-50 btn btn-outline-dark me-2 d-flex justify-content-center align-items-center" marcador="33">
+              <i class="card-body-icon fa-solid fa-bag-shopping"></i>
+            </button>
+          </div>
         </div>
       </a>
       <a class="card card-top col-xl-2 col-md-4 col-12 ms-xl-2 mt-md-0 mt-2" href="promotion.html">
@@ -185,6 +205,7 @@
   <script type="text/javascript" src="./assets/bootstrap/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="/assets/js/database.js"></script>
   <script type="text/javascript" src="/assets/js/functionsCarrito.js"></script>
+  <script type="text/javascript" src="./assets/js/choose.js"></script>
   <script type="text/javascript" src="./assets/js/cart-shop.js"></script>
 
 </body>

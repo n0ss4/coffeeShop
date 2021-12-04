@@ -74,3 +74,23 @@ footer a{
 .h75{
     height: 75vh;
 }
+
+@media (min-width: 768px) {
+    .logo{
+        display: none;
+    }
+
+    .title{
+        display: inherit;
+    }
+}
+
+@media (max-width: 768px) {
+    .title{
+        display: none;
+    }
+
+    .logo{
+        display: inherit;
+    }
+}
