@@ -141,7 +141,7 @@ const baseDeDatos = [
     },
     {
         id: 15,
-        nombre: 'Cocaolat',
+        nombre: 'Cacaolat',
         precio: 1.20,
         imagen: '/assets/img/drinks/cacaolat.png',
         categoria: 'beguda',

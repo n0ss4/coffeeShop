@@ -113,23 +113,16 @@ renderizarCarrito();
 
 function printDiv() {
 
-    if(carrito.length===0){
-        //alert("The card is empty");
-        window.open('order.html','_self');
-
-    }else{
-        var divContents = document.getElementById("GFG").innerHTML;
         var a = window.open('', '', 'height=500, width=800');
         a.document.write('<html>');
-        a.document.write('<body > <h1>Your cart is:: <br>');
-        a.document.write(Math.floor(Math.random() * (10000 - 0) + 0));
-        a.document.write(divContents);
+        a.document.write('<body > <h1>Your cart order is:: <br></h1>');
+        a.document.write('<a>'+Math.floor(Math.random() * (10000 - 0) + 0)+'<br>'+"Thanks for your purchase"+'</a>')
         a.document.write('</body></html>');
         a.document.close();
         a.print();
         window.open('index.html','_self');
         localStorage.removeItem('carrito');
         localStorage.removeItem('name');
-    }
+
 
 }
