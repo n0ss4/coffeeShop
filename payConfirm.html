@@ -2,21 +2,21 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Cafè Facultat de Ciències - Others</title>
-    <link rel="shortcut icon" href="./assets/img/logo.ico" type="image/x-icon">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" type="text/css">
-        <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
-        <link rel="stylesheet" href="./assets/css/fonts.css" type="text/css">
-        <link rel="stylesheet" href="./assets/css/cart-shop.css" type="text/css">
-        <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css" type="text/css">
+  <meta charset="UTF-8">
+  <title>Cafè Facultat de Ciències - Others</title>
+  <link rel="shortcut icon" href="./assets/img/logo.ico" type="image/x-icon">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+  <link rel="stylesheet" href="./assets/css/fonts.css" type="text/css">
+  <link rel="stylesheet" href="./assets/css/payment.css" type="text/css">
+  <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css" type="text/css">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-transparent fixed-top">
+  <nav class="navbar navbar-transparent fixed-top">
     <button class="navbar-toggler navbar-custom-toggler" type="button" data-bs-toggle="offcanvas"
       data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false"
       aria-label="Toggle navigation">
@@ -71,60 +71,58 @@
     </ul>
   </section>
 
-    <main class="d-md-flex flex-md-column">
-        <div class="container">
-            <h1>Finalitza Pagament</h1>
-            <div class="col-md-4" id="GFG">
-                <aside>
-                    <h2>Carrito</h2>
-                    <ul id="carrito" class="list-group"></ul>
-                    <hr>
-                    <p class="text-right">Total: <span id="total"></span>&euro;</p>
+  <main class="d-md-flex flex-md-column">
+    <section class="col-12 h-sm-25 h-xs-25 d-flex title-free align-items-center p-32">
+      <h1>Cart</h1>
+    </section>
+    <section class="shopping-cart mt-md-0 mt-4 col-12 p-32 d-flex align-items-center justify-content-center">
+        <ul id="carrito" class="col-md-8 col-12 shopping-cart-items"></ul>
+        <hr>
+        
+    </section>
+    <div class="col-12 p-32 d-flex flex-column align-items-center">
+      <p class="col-md-8 col-12 text-right">Total: <span id="total"></span>&euro;</p>
+      <button id="boton-pay" onclick="printDiv()" class="col-md-8 col-12 btn btn-dark w-md-50">Pay</button>
+    </div>
+  </main>
 
+  <footer class="mt-md-auto mt-5 py-md-3 row me-0 ms-0 mb-0 p-32">
+    <div class="col-md-4 d-flex justify-content-center align-items-center">
+      <span class="me-lg-auto">Copyright &copy; Cafè Facultat de Ciències 2021</span>
+    </div>
+    <div class="col-md-4 d-flex bd-highlight justify-content-center">
+      <div class="p-2 bd-highlight">
+        <a href="#">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+      <div class="p-2 bd-highlight">
+        <a href="#">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
+      <div class="p-2 bd-highlight">
+        <a href="#">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4 d-flex bd-highlight justify-content-center justify-content-md-end">
+      <div class="p-2 bd-highlight">
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div class="p-2 bd-highlight">
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
 
-                </aside>
-            </div>
-            <button id="boton-pay" onclick="printDiv()" class="btn btn-success">Pay</button>
-        </div>
-    </main>
-
-    <footer class="mt-auto py-md-3 row me-0 ms-0 mb-0 p-32">
-        <div class="col-md-4 d-flex justify-content-center align-items-center">
-          <span class="me-lg-auto">Copyright &copy; Cafè Facultat de Ciències 2021</span>
-        </div>
-        <div class="col-md-4 d-flex bd-highlight justify-content-center">
-          <div class="p-2 bd-highlight">
-            <a href="#">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </div>
-          <div class="p-2 bd-highlight">
-            <a href="#">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </div>
-          <div class="p-2 bd-highlight">
-            <a href="#">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex bd-highlight justify-content-center justify-content-md-end">
-          <div class="p-2 bd-highlight">
-            <a href="#">Privacy Policy</a>
-          </div>
-          <div class="p-2 bd-highlight">
-            <a href="#">Terms of Use</a>
-          </div>
-        </div>
-      </footer>
-
-    <script type="text/javascript" src="./assets/fontawesome/js/all.min.js"></script>
-    <script type="text/javascript" src="./assets/jquery/jquery-3.3.1.slim.min.js"></script>
-    <script type="text/javascript" src="./assets/popper/popper.min.js"></script>
-    <script type="text/javascript" src="./assets/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/database.js"></script>
-    <script type="text/javascript" src="assets/js/payConfirm.js"></script>
+  <script type="text/javascript" src="./assets/fontawesome/js/all.min.js"></script>
+  <script type="text/javascript" src="./assets/jquery/js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="./assets/popper/popper.min.js"></script>
+  <script type="text/javascript" src="./assets/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/js/database.js"></script>
+  <script type="text/javascript" src="assets/js/payConfirm.js"></script>
 
 </body>
 
