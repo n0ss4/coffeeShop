@@ -1,116 +1,160 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Cafè Facultat de Ciències - Promotions</title>
-    <meta name="viewport"
+  <meta charset="utf-8">
+  <title>Cafè Facultat de Ciències - Promotions</title>
+  <link rel="shortcut icon" href="./assets/img/logo.ico" type="image/x-icon">
+  <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
   <link rel="stylesheet" href="./assets/css/fonts.css" type="text/css">
+  <link rel="stylesheet" href="./assets/css/promotion.css" type="text/css">
   <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css" type="text/css">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-transparent fixed-top">
-        <button class="navbar-toggler navbar-custom-toggler" type="button" data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand me-auto ms-3 title" href="./index.html">Cafè Facultat de Ciències</a>
-        <a id="shop" class="navbar-brand ms-auto me-4 pt-1" href="#">
-          <svg width="24px" height="24px" fill="#111" viewBox="0 0 24 24">
-            <path d="M16 7a1 1 0 0 1-1-1V3H9v3a1 1 0 0 1-2 0V3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3a1 1 0 0 1-1 1z"></path>
-            <path
-              d="M20 5H4a2 2 0 0 0-2 2v13a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a2 2 0 0 0-2-2zm0 15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7h16z">
-            </path>
-          </svg>
+  <nav class="navbar navbar-transparent fixed-top">
+    <button class="navbar-toggler navbar-custom-toggler" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand me-auto ms-3" href="./index.html">
+      <span class="title">Cafè Facultat de Ciències</span>
+      <img src="./assets/img/logo.png" alt="logo" class="logo" width="45" height="45">
+    </a>
+  </nav>
+
+  <section class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+    aria-labelledby="offcanvasExampleLabel">
+    <ul class="offcanvas-body nav h-100 nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="index.html" class="nav-link link-dark" aria-current="page">
+          <i class="fa-solid fa-house fa-lg"></i>
+          <span class="ps-2">Home</span>
         </a>
-      </nav>
-    
-      <section class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
-        aria-labelledby="offcanvasExampleLabel">
-        <ul class="offcanvas-body nav h-100 nav-pills flex-column mb-auto">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link link-dark" aria-current="page">
-              <i class="fa-solid fa-house fa-lg"></i>
-              <span class="ps-2">Home</span>
-            </a>
-          </li>
-          <li>
-            <a href="order.html" class="nav-link link-dark">
-              <i class="fa-solid fa-bag-shopping fa-lg"></i>
-              <span class="ps-2">Order</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="nav-link active">
-              <i class="fa-solid fa-tag fa-lg"></i>
-              <span class="ps-2">Promotion</span>
-            </a>
-          </li>
-          <li>
-            <a href="event.html" class="nav-link link-dark">
-              <i class="fa-solid fa-newspaper fa-lg"></i>
-              <span class="ps-2">Events/News</span>
-            </a>
-          </li>
-          <li>
-            <a href="contact.html" class="nav-link link-dark">
-              <i class="fa-solid fa-message fa-lg"></i>
-              <span class="ps-2">Contact</span>
-            </a>
-          </li>
-          <li class="mt-auto">
-            <hr>
-            <a href="payConfirm.html" class="nav-link link-dark">
-              <i class="fa-solid fa-cart-shopping fa-lg"></i>
-              <span class="ps-2">Shopping Cart</span>
-            </a>
-          </li>
-        </ul>
-      </section>
+      </li>
+      <li>
+        <a href="order.html" class="nav-link link-dark">
+          <i class="fa-solid fa-bag-shopping fa-lg"></i>
+          <span class="ps-2">Order</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link active">
+          <i class="fa-solid fa-tag fa-lg"></i>
+          <span class="ps-2">Promotion</span>
+        </a>
+      </li>
+      <li>
+        <a href="event.html" class="nav-link link-dark">
+          <i class="fa-solid fa-newspaper fa-lg"></i>
+          <span class="ps-2">Events/News</span>
+        </a>
+      </li>
+      <li>
+        <a href="contact.html" class="nav-link link-dark">
+          <i class="fa-solid fa-message fa-lg"></i>
+          <span class="ps-2">Contact</span>
+        </a>
+      </li>
+      <li class="mt-auto">
+        <hr>
+        <a href="payConfirm.html" class="nav-link link-dark">
+          <i class="fa-solid fa-cart-shopping fa-lg"></i>
+          <span class="ps-2">Shopping Cart</span>
+        </a>
+      </li>
+    </ul>
+  </section>
 
-    <main class="d-flex">
-        <div class="column col-12 align-self-center">
-            ...
+  <main class="h75 d-md-flex flex-md-column">
+    <section class="col-12 h-sm-25 h-xs-25 d-flex title-free align-items-center p-32">
+      <h1>Promotions</h1>
+    </section>
+    <section class="mt-3 h75 d-flex flex-wrap p-32 h-100 align-items-center">
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./assets/img/order/estrella-damm.png" class="img-fluid rounded-start" alt="estrella_damm">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Estrella Damm</h5>
+              <p class="card-text">
+                Si ens segueixes en el nostre instagram ara tenim una promoció per a tu!
+                <span class="d-block mt-2">
+                  Una estrella damm per un euro!
+                </span>
+                <span class="d-block mt-2">
+                  A que esperes? Segueix-nos!
+                </span>
+              </p>
+              <p class="card-text"><small class="text-muted">Created 4 weeks ago</small></p>
+            </div>
+          </div>
         </div>
-    </main>
+      </div>
+      <div class="card ms-md-2 mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./assets/img/order/triangle-xocolata.png" class="img-fluid rounded-start" alt="triangle">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Triangle de Xocolata</h5>
+                <p class="card-text">
+                  Si ens segueixes en el nostre instagram ara tenim una promoció per a tu!
+                  <span class="d-block mt-2">
+                    Un triangle de xocolata per un euro!
+                  </span>
+                  <span class="d-block mt-2">
+                    A que esperes? Segueix-nos!
+                  </span>
+                </p>
+              <p class="card-text"><small class="text-muted">Created 2 weeks ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <footer class="mt-md-auto mt-5 py-md-3 row me-0 ms-0 mb-0 p-32">
-        <div class="col-md-4 d-flex justify-content-center align-items-center">
-          <span class="me-lg-auto">Copyright &copy; Cafè Facultat de Ciències 2021</span>
-        </div>
-        <div class="col-md-4 d-flex bd-highlight justify-content-center">
-          <div class="p-2 bd-highlight">
-            <a href="#">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </div>
-          <div class="p-2 bd-highlight">
-            <a href="#">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </div>
-          <div class="p-2 bd-highlight">
-            <a href="#">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex bd-highlight justify-content-center justify-content-md-end">
-          <div class="p-2 bd-highlight">
-            <a href="#">Privacy Policy</a>
-          </div>
-          <div class="p-2 bd-highlight">
-            <a href="#">Terms of Use</a>
-          </div>
-        </div>
-      </footer>
 
-    <script type="text/javascript" src="./assets/fontawesome/js/all.min.js"></script>
+  <footer class="mt-md-auto mt-5 py-md-3 row me-0 ms-0 mb-0 p-32">
+    <div class="col-md-4 d-flex justify-content-center align-items-center">
+      <span class="me-lg-auto">Copyright &copy; Cafè Facultat de Ciències 2021</span>
+    </div>
+    <div class="col-md-4 d-flex bd-highlight justify-content-center">
+      <div class="p-2 bd-highlight">
+        <a href="#">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+      <div class="p-2 bd-highlight">
+        <a href="#">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
+      <div class="p-2 bd-highlight">
+        <a href="#">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4 d-flex bd-highlight justify-content-center justify-content-md-end">
+      <div class="p-2 bd-highlight">
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div class="p-2 bd-highlight">
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="./assets/fontawesome/js/all.min.js"></script>
   <script type="text/javascript" src="./assets/jquery/jquery-3.3.1.slim.min.js"></script>
   <script type="text/javascript" src="./assets/popper/popper.min.js"></script>
   <script type="text/javascript" src="./assets/bootstrap/js/bootstrap.min.js"></script>

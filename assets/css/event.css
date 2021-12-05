@@ -1,0 +1,33 @@
+body{
+    padding: 0;
+}
+
+main{
+    margin-top: 56px;
+}
+
+nav{
+    background-color: white;
+}
+
+@media (min-width: 768px){
+    main{
+        min-height: 80vh;
+    }
+
+    .p-32{
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .title-free{
+        height: 15vh;
+        background-color: rgb(246, 246, 246);
+    }
+}
+
+@media (max-width: 768px){
+    body{
+        padding: 3.5rem 2rem 0 2rem;
+    }
+}
