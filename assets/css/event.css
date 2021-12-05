@@ -10,7 +10,21 @@ nav{
     background-color: white;
 }
 
-@media (min-width: 768px){
+.card-img-top{
+    height: 60%;
+}
+
+.card-body{
+    height: 30%;
+}
+
+@media (min-width: 1250px){
+    .card{
+        height: 60vh;
+        width: 40vh;
+        margin-left: .5rem;
+    }
+
     main{
         min-height: 80vh;
     }
@@ -26,8 +40,41 @@ nav{
     }
 }
 
-@media (max-width: 768px){
+@media (min-width: 1000px) and (max-width: 1250px){
     body{
         padding: 3.5rem 2rem 0 2rem;
+    }
+
+    main{
+        height: auto !important;
+    }
+
+    .card{
+        margin-left: .5rem !important;
+        margin-top: .5rem;
+        height: 60vh;
+        width: 40vh;
+    }
+
+    .events{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1000px){
+    body{
+        padding: 3.5rem 2rem 0 2rem;
+    }
+
+    main{
+        height: auto !important;
+    }
+
+    .card{
+        margin-left: 0 !important;
+    }
+
+    .card{
+        margin-top: .5rem;
     }
 }
